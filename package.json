@@ -1,6 +1,6 @@
 {
     "name": "1mwapp",
-    "version": "2.1.0",
+    "version": "3.0.0",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -10,14 +10,15 @@
     },
     "dependencies": {
         "@fullhuman/postcss-purgecss": "^4.0.3",
-        "autoprefixer": "^10.2.5",
-        "bootstrap": "^5.0.0-beta3",
-        "next": "10.0.9",
+        "autoprefixer": "^10.3.4",
+        "bootstrap": "^5.1.1",
+        "next": "11.1.2",
         "postcss-flexbugs-fixes": "^5.0.2",
         "postcss-preset-env": "^6.7.0",
         "react": "17.0.2",
         "react-dom": "17.0.2",
         "react-responsive-embed": "^2.1.0",
-        "reactstrap": "^8.9.0"
+        "reactstrap": "^8.10.0",
+        "sharp": "^0.29.1"
     }
 }

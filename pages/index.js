@@ -33,16 +33,16 @@ export default function Home() {
                         the Edge & Cloud
                     </div>
                     <p className="lead">
-                        1 Martian Way (1MW) the leading manufacturer of
+                        1 Martian Way (1MW) is the leading manufacturer of
                         Industrial Drones and Embedded Artificial Intelligence
                         products based in Mumbai, India. We create advanced
                         sentient drones, robots and scalable platforms that are
                         used in a large number of industrial use cases powered
-                        by AI on the edge and cloud. We have an extensive
-                        experience in providing custom-built drones as per our
-                        client requirements driven by a team of high tech-worth
-                        professionals. We are most popularly known as the
-                        creators of the internationally acclaimed{" "}
+                        by AI on the edge and cloud. We have deep expertise in
+                        providing custom-built drones as per client requirements
+                        driven by a team of high tech-worth roboticists and AI
+                        scientists. We are most popularly known as the creators
+                        of the internationally acclaimed{" "}
                         <a
                             href="https://droneracingindia.com"
                             target="_blank"

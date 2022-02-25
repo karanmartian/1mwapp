@@ -24,30 +24,38 @@ export default function Licensing() {
                         <div className="container">
                             <div className="row">
                                 <div className="col">
-                                    <p>
-                                        Our Licensing Policy is currently being
-                                        revised and will be updated shortly.
-                                    </p>
-                                    <p />
                                     <h5>Contact Us</h5>
-                                    <p />
-                                    If you have any questions about our
-                                    Licensing Policy please contact us at:
-                                    <p />
-                                    1 Martian Way Corp.
+                                    <p>
+                                        Please contact us directly to know about
+                                        the various licensing options available
+                                        on our products and for any
+                                        reseller/distributor/partnership
+                                        enquiries. <p /> *Time Saving Tip*:
+                                        Email is the best way to get in touch
+                                        with us as our exact department can
+                                        reach out to you quickly and efficiently
+                                        within minutes, sometimes even a few
+                                        seconds :)
+                                    </p>
+                                    <b>1 Martian Way Industries Pvt. Ltd</b>
                                     <br />
                                     https://1martianway.com
                                     <br />
-                                    Regd. Office
+                                    <p />
+                                    <b>Regd. Office</b>
                                     <br />
                                     502 Satya Sadan, Bhimani Street, Matunga
                                     East,
                                     <br />
-                                    Mumbai – 400 019, India
+                                    Mumbai – 400 019
                                     <br />
-                                    Tel: +91 8850.227233
+                                    India
+                                    <p />
+                                    The Martians love their Email:
+                                    sales[at]1martianway[dot]com
                                     <br />
-                                    Email: sales[at]1martianway[dot]com
+                                    Drop us a line if you spotted a Martian: +91
+                                    8850.227233
                                 </div>
                             </div>
                         </div>

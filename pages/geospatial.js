@@ -13,6 +13,11 @@ export default function GIS() {
                     name="Description"
                     content="1 Martian Way produces Geospatial Intelligence Software such as 1MW AirDiff and 1MW xFleetY"
                 />
+                <meta
+                    property="og:title"
+                    content="GIS | 1 Martian Way"
+                    key="title"
+                />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />

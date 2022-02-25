@@ -13,6 +13,12 @@ export default function Home() {
                     | Mumbai | India
                 </title>
                 <meta
+                    property="og:title"
+                    content="1 Martian Way - Industrial Drones, Embedded AI Manufacturer
+                    | Mumbai | India"
+                    key="title"
+                />
+                <meta
                     name="Description"
                     content="1 Martian Way is the leading manufacturer of Industrial Drones and Embedded Artificial Intelligence products 
                     based in Mumbai, India"

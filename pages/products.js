@@ -18,6 +18,11 @@ export default function Products() {
                     name="Description"
                     content="1 Martian Way produces innovative cutting-edge products in the areas of drones, robotics and automation."
                 />
+                <meta
+                    property="og:title"
+                    content="Products | 1 Martian Way"
+                    key="title"
+                />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />

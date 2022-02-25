@@ -13,6 +13,11 @@ export default function Brands() {
                     name="Description"
                     content="1 Martian Way Brands include IDRL - Indian Drone Racing League and Roboland."
                 />
+                <meta
+                    property="og:title"
+                    content="Brands | 1 Martian Way"
+                    key="title"
+                />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />

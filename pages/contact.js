@@ -10,7 +10,12 @@ export default function Contact() {
                 <title>Contact | 1 Martian Way</title>
                 <meta
                     name="Description"
-                    content="Contact 1 Martian Way to enquire about our products and services."
+                    content="Contact 1 Martian Way to enquire about our products and technology."
+                />
+                <meta
+                    property="og:title"
+                    content="Contact | 1 Martian Way"
+                    key="title"
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

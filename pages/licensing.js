@@ -11,6 +11,11 @@ export default function Licensing() {
                     name="Description"
                     content="1 Martian Way licenses its innovations for third-party usage."
                 />
+                <meta
+                    property="og:title"
+                    content="Licensing | 1 Martian Way"
+                    key="title"
+                />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />

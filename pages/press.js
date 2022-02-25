@@ -14,6 +14,11 @@ export default function Press() {
                     name="Description"
                     content="1 Martian Way has been featured in numerous local and international media."
                 />
+                <meta
+                    property="og:title"
+                    content="Press | 1 Martian Way"
+                    key="title"
+                />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />

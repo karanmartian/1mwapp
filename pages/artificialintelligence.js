@@ -15,6 +15,11 @@ export default function AI() {
                     which manufactures software & embedded AI products that power drones, robots, web/mobile
                     platforms and advanced automation systems."
                 />
+                <meta
+                    property="og:title"
+                    content="Artificial Intelligence | 1 Martian Way"
+                    key="title"
+                />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />

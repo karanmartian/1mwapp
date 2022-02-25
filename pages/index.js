@@ -9,14 +9,13 @@ export default function Home() {
         <div className="container">
             <Head>
                 <title>
-                    1 Martian Way - AI for Drones, Robots, Automation Systems |
-                    India
+                    1 Martian Way - Industrial Drones, Embedded AI Manufacturer
+                    | Mumbai | India
                 </title>
                 <meta
                     name="Description"
-                    content="1 Martian Way is an Artificial Intelligence company
-                    which manufactures software & embedded AI products that power drones, robots, web/mobile
-                    platforms and advanced automation systems"
+                    content="1 Martian Way is the leading manufacturer of Industrial Drones and Embedded Artificial Intelligence products 
+                    based in Mumbai, India"
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -24,15 +23,20 @@ export default function Home() {
             <main>
                 <div className="jumbotron">
                     <div className="h1">
-                        India's AI Company for Drones, Robots, Automation
+                        India's Leading Manufacturer of Industrial Drones, AI on
+                        the Edge & Cloud
                     </div>
                     <p className="lead">
-                        1 Martian Way (1MW) is an Artificial Intelligence
-                        company based in Mumbai, India which manufactures
-                        software & embedded AI products that power drones,
-                        robots, web/mobile platforms and advanced automation
-                        systems. We are most popularly known as the creators of
-                        the internationally acclaimed{" "}
+                        1 Martian Way (1MW) the leading manufacturer of
+                        Industrial Drones and Embedded Artificial Intelligence
+                        products based in Mumbai, India. We create advanced
+                        sentient drones, robots and scalable platforms that are
+                        used in a large number of industrial use cases powered
+                        by AI on the edge and cloud. We have an extensive
+                        experience in providing custom-built drones as per our
+                        client requirements driven by a team of high tech-worth
+                        professionals. We are most popularly known as the
+                        creators of the internationally acclaimed{" "}
                         <a
                             href="https://droneracingindia.com"
                             target="_blank"
@@ -44,8 +48,15 @@ export default function Home() {
                     </p>
                     <hr className="my-2" />
                     <p>
-                        Our products include the 1MW Geospatial Intel Suite, 1MW
-                        Backduck and 1MW xFleetY. Our brand family includes the{" "}
+                        Our core products include the 1MW Industrux Series of
+                        Drones and 1MW xFleetY - An Extensible & Scalable Drone
+                        Fleet Management SaaS that can track millions of
+                        heterogenous drones with transmission of real-time
+                        video, tracking and telemetry data along with
+                        weather/situational awareness, collision avoidance and
+                        other constantly involving features. Other offerings
+                        include the 1MW Geospatial Intel Suite and 1MW Backduck.
+                        Our brand family includes the{" "}
                         <a
                             href="https://droneracingindia.com"
                             target="_blank"

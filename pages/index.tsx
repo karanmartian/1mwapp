@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
-import Header from "./header";
+import Link from "next/link";
 import Footer from "./footer";
+import Header from "./header";
 
-export default function Home() {
+const Home = () => {
     return (
         <div className="container">
             <Head>
@@ -110,7 +110,6 @@ export default function Home() {
                                                 <Image
                                                     src="/assets/img/airdiff-cover.png"
                                                     alt="1MW AirDiff"
-                                                    layout="responsive"
                                                     width="220"
                                                     height="220"
                                                 />
@@ -153,7 +152,6 @@ export default function Home() {
                                                 <Image
                                                     src="/assets/img/backduck-cover.png"
                                                     alt="1MW BackDuck"
-                                                    layout="responsive"
                                                     width="220"
                                                     height="220"
                                                 />
@@ -194,4 +192,6 @@ export default function Home() {
             <Footer />
         </div>
     );
-}
+};
+
+export default Home;

@@ -1,11 +1,9 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import Header from "./header";
-import Footer from "./footer";
 import ResponsiveEmbed from "react-responsive-embed";
+import Footer from "./footer";
+import Header from "./header";
 
-export default function Press() {
+const Press = () => {
     return (
         <div className="container">
             <Head>
@@ -193,4 +191,6 @@ export default function Press() {
             <Footer />
         </div>
     );
-}
+};
+
+export default Press;

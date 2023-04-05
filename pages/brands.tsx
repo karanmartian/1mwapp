@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-import Header from "./header";
-import Footer from "./footer";
 import ResponsiveEmbed from "react-responsive-embed";
+import Footer from "./footer";
+import Header from "./header";
 
-export default function Brands() {
+const Brands = () => {
     return (
         <div className="container">
             <Head>
@@ -139,4 +139,6 @@ export default function Brands() {
             <Footer />
         </div>
     );
-}
+};
+
+export default Brands;

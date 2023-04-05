@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
-import Header from "./header";
+import Link from "next/link";
 import Footer from "./footer";
+import Header from "./header";
 
-export default function AI() {
+const AI = () => {
     return (
         <div className="container">
             <Head>
@@ -136,4 +136,6 @@ export default function AI() {
             <Footer />
         </div>
     );
-}
+};
+
+export default AI;

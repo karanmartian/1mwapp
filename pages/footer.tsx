@@ -1,4 +1,4 @@
-export default function Footer() {
+const Footer = () => {
     return (
         <div className="center">
             <hr className="featurette-divider" />
@@ -11,4 +11,6 @@ export default function Footer() {
             </footer>
         </div>
     );
-}
+};
+
+export default Footer;

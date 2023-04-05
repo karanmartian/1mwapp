@@ -4,12 +4,7 @@ import Image from "next/image";
 import Header from "./header";
 import Footer from "./footer";
 
-// /assets/img/airdiff-cover.png";
-// /assets/img/backduck-cover.png";
-// /assets/img/backduckmobile-cover.png";
-// /assets/img/xfleety-cover.png";
-
-export default function Products() {
+const Products = () => {
     return (
         <div className="container">
             <Head>
@@ -208,4 +203,6 @@ export default function Products() {
             <Footer />
         </div>
     );
-}
+};
+
+export default Products;

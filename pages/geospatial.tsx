@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
-import Header from "./header";
+import Link from "next/link";
 import Footer from "./footer";
+import Header from "./header";
 
-export default function GIS() {
+const GIS = () => {
     return (
         <div className="container">
             <Head>
@@ -134,4 +134,6 @@ export default function GIS() {
             <Footer />
         </div>
     );
-}
+};
+
+export default GIS;

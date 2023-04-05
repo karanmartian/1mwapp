@@ -4,7 +4,7 @@ import Head from "next/head";
 import "../styles/bootstrap.min.css";
 import "../styles/custom.css";
 
-function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
     return (
         <>
             <Head>
@@ -16,6 +16,6 @@ function App({ Component, pageProps }) {
             <Component {...pageProps} />
         </>
     );
-}
+};
 
 export default App;

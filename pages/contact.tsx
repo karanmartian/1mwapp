@@ -1,6 +1,10 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Footer from "./footer";
-import Header from "./header";
+
+const Header = dynamic(() => import("./header"), {
+    ssr: false,
+});
 
 const Contact = () => {
     return (

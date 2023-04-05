@@ -1,8 +1,12 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "./footer";
-import Header from "./header";
+
+const Header = dynamic(() => import("./header"), {
+    ssr: false,
+});
 
 const GIS = () => {
     return (
@@ -36,9 +40,9 @@ const GIS = () => {
                                     <Image
                                         src="/assets/img/airdiff.jpg"
                                         alt="1MW AirDiff"
-                                        layout="responsive"
                                         width="832"
                                         height="609"
+                                        priority
                                     />
                                 </div>
                                 <div className="col-xs-12 col-sm-6">

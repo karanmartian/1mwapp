@@ -1,8 +1,12 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Link from "next/link";
 import ResponsiveEmbed from "react-responsive-embed";
 import Footer from "./footer";
-import Header from "./header";
+
+const Header = dynamic(() => import("./header"), {
+    ssr: false,
+});
 
 const Brands = () => {
     return (
@@ -28,7 +32,7 @@ const Brands = () => {
                 <div className="card-deck">
                     <div className="card border-dark mb-3">
                         <div className="card-header">
-                            IDRL – Indian Drone Racing League
+                            IDRL - Indian Drone Racing League
                         </div>
                         <div className="card-body text-dark">
                             <div className="container">
@@ -53,7 +57,7 @@ const Brands = () => {
                                             The Indian Drone Racing League
                                             (IDRL)
                                         </a>{" "}
-                                        is India’s First and Largest Drone
+                                        is India's First and Largest Drone
                                         Racing Sports League. Since our
                                         inception in August 2016 at IIT
                                         Gandhinagar, we have completed 9
@@ -64,7 +68,7 @@ const Brands = () => {
                                         drone racing events hosted by IDRL.
                                         <p />
                                         IDRL also has the reputation of
-                                        conducting India’s first night drone
+                                        conducting India's first night drone
                                         racing at IIT Madras. The IDRL Community
                                         has 1700+ registered pilots on the
                                         platform.
@@ -104,7 +108,7 @@ const Brands = () => {
                                 <div className="row">
                                     <div className="col">
                                         <p />
-                                        RoboLand is the World’s First Human
+                                        RoboLand is the World's First Human
                                         Robot Gaming Zone. We take Man-Machine
                                         interaction to a whole new level by
                                         building and deploying entertainment

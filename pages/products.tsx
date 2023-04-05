@@ -1,8 +1,12 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
-import Header from "./header";
+import Link from "next/link";
 import Footer from "./footer";
+
+const Header = dynamic(() => import("./header"), {
+    ssr: false,
+});
 
 const Products = () => {
     return (
@@ -39,6 +43,7 @@ const Products = () => {
                                                     alt="1MW AirDiff"
                                                     width="220"
                                                     height="220"
+                                                    priority
                                                 />
                                             </Link>
                                         </div>

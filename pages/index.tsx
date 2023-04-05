@@ -1,8 +1,12 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "./footer";
-import Header from "./header";
+
+const Header = dynamic(() => import("./header"), {
+    ssr: false,
+});
 
 const Home = () => {
     return (

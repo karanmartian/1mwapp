@@ -1,6 +1,10 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Footer from "./footer";
-import Header from "./header";
+
+const Header = dynamic(() => import("./header"), {
+    ssr: false,
+});
 
 const Licensing = () => {
     return (
@@ -35,12 +39,14 @@ const Licensing = () => {
                                         the various licensing options available
                                         on our products and for any
                                         reseller/distributor/partnership
-                                        enquiries. <p /> *Time Saving Tip*:
-                                        Email is the best way to get in touch
-                                        with us as our exact department can
-                                        reach out to you quickly and efficiently
-                                        within minutes, sometimes even a few
-                                        seconds :)
+                                        enquiries.
+                                    </p>
+                                    <p>
+                                        *Time Saving Tip*: Email is the best way
+                                        to get in touch with us as our exact
+                                        department can reach out to you quickly
+                                        and efficiently within minutes,
+                                        sometimes even a few seconds :)
                                     </p>
                                     <b>1 Martian Way Industries Pvt. Ltd</b>
                                     <br />

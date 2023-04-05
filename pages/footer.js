@@ -5,7 +5,7 @@ export default function Footer() {
             <footer className="footer">
                 <div className="container">
                     <p className="text-muted">
-                        &copy; 2022 1 Martian Way Industries Pvt. Ltd
+                        &copy; 2023 1 Martian Way Industries Pvt. Ltd
                     </p>
                 </div>
             </footer>

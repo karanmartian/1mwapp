@@ -42,6 +42,7 @@ const GIS = () => {
                                         alt="1MW AirDiff"
                                         width="832"
                                         height="609"
+                                        layout="responsive"
                                         priority
                                     />
                                 </div>

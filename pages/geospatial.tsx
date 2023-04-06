@@ -100,6 +100,7 @@ const GIS = () => {
                                         layout="responsive"
                                         width="832"
                                         height="455"
+                                        priority
                                     />
                                 </div>
                                 <div className="col-xs-12 col-sm-6">

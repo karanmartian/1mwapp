@@ -45,6 +45,7 @@ const AI = () => {
                                         layout="responsive"
                                         width="832"
                                         height="528"
+                                        priority
                                     />
                                 </div>
                                 <div className="col-xs-12 col-sm-6">
@@ -102,6 +103,7 @@ const AI = () => {
                                         layout="responsive"
                                         width="832"
                                         height="471"
+                                        priority
                                     />
                                 </div>
                                 <div className="col-xs-12 col-sm-6">

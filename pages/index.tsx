@@ -116,6 +116,7 @@ const Home = () => {
                                                     alt="1MW AirDiff"
                                                     width="220"
                                                     height="220"
+                                                    priority
                                                 />
                                             </Link>
                                         </div>
@@ -158,6 +159,7 @@ const Home = () => {
                                                     alt="1MW BackDuck"
                                                     width="220"
                                                     height="220"
+                                                    priority
                                                 />
                                             </Link>
                                         </div>

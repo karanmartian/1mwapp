@@ -70,7 +70,7 @@ const Brands = () => {
                                         IDRL also has the reputation of
                                         conducting India's first night drone
                                         racing at IIT Madras. The IDRL Community
-                                        has 1700+ registered pilots on the
+                                        has 5000+ registered pilots on the
                                         platform.
                                     </div>
                                 </div>

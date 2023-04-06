@@ -52,9 +52,9 @@ const Products = () => {
                                         <p />
                                         Our suite of advanced geospatial
                                         intelligence software comprises of 1MW
-                                        AirDiff – Change Detection Software for
+                                        AirDiff - Change Detection Software for
                                         large infrastructure assets and 1MW
-                                        xFleetY – Drone fleet monitoring and
+                                        xFleetY - Drone fleet monitoring and
                                         tracking
                                     </div>
                                 </div>
@@ -84,6 +84,7 @@ const Products = () => {
                                                     alt="1MW xFleetY"
                                                     width="220"
                                                     height="220"
+                                                    priority
                                                 />
                                             </Link>
                                         </div>
@@ -127,6 +128,7 @@ const Products = () => {
                                                     alt="1MW Backduck"
                                                     width="220"
                                                     height="220"
+                                                    priority
                                                 />
                                             </Link>
                                         </div>
@@ -175,6 +177,7 @@ const Products = () => {
                                                     alt="1MW Backduck Mobile"
                                                     width="220"
                                                     height="220"
+                                                    priority
                                                 />
                                             </Link>
                                         </div>

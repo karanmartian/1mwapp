@@ -36,6 +36,7 @@ const Header = () => {
                         alt="1mw logo"
                         width="68"
                         height="30"
+                        priority
                     />
                     <span style={{ marginLeft: 10 }}>1 Martian Way</span>
                 </div>

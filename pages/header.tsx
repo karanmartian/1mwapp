@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { memo, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
     Button,
     Collapse,
@@ -89,4 +89,4 @@ const Header = () => {
     );
 };
 
-export default memo(Header);
+export default Header;

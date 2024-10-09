@@ -7,7 +7,7 @@
     // Format a file on save.
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+        "source.organizeImports": "explicit"
     },
     // Enable/disable JavaScript validation. (For Flow)
     "javascript.validate.enable": false,

@@ -9,15 +9,15 @@ export default function Home() {
                 <div className="relative isolate overflow-hidden h-[400px] lg:h-[500px]">
                     <div className="absolute inset-0 -z-10">
                         <Image
-                            src="/assets/img/hero/main-hero.jpg"
-                            alt="Advanced industrial technology"
+                            src="/assets/img/hero/robots-mars.jpg"
+                            alt="Advanced robotics and AI technology"
                             fill
                             sizes="100vw"
                             quality={90}
                             className="object-cover object-center"
                             priority
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/50 dark:from-gray-950/90 dark:to-gray-950/50" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/30 dark:from-gray-950/70 dark:to-gray-950/30" />
                     </div>
 
                     <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8 relative">

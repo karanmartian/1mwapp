@@ -120,7 +120,7 @@ export default function Products() {
                             <div className="mt-8">
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-xs hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                                    className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                                 >
                                     Contact Us
                                     <ArrowRightIcon className="ml-2 h-4 w-4" />

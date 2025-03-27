@@ -128,7 +128,7 @@ export default function Contact() {
                         </div>
 
                         {/* Quick Contact Form */}
-                        <div className="lg:border-l lg:border-gray-200 lg:pl-8 dark:lg:border-gray-700">
+                        {/* <div className="lg:border-l lg:border-gray-200 lg:pl-8 dark:lg:border-gray-700">
                             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
                                 Send us a Message
                             </h2>
@@ -205,7 +205,7 @@ export default function Contact() {
                                     )}
                                 </div>
                             </form>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

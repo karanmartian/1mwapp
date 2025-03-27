@@ -68,7 +68,7 @@ export default function ArtificialIntelligence() {
                         {features.map((feature) => (
                             <div
                                 key={feature.name}
-                                className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-sm ring-1 ring-gray-900/5"
+                                className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-xs ring-1 ring-gray-900/5"
                             >
                                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
                                     <feature.icon
@@ -199,7 +199,7 @@ export default function ArtificialIntelligence() {
                             <div className="mt-8">
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                                    className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-xs hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                                 >
                                     Contact Us
                                     <ArrowRightIcon className="ml-2 h-4 w-4" />

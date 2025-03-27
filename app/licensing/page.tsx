@@ -31,7 +31,7 @@ export default function Licensing() {
 
                 <div className="mx-auto mt-8 max-w-2xl space-y-8 lg:mx-0">
                     {/* Licensing Options */}
-                    <div className="rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-sm ring-1 ring-gray-900/5">
+                    <div className="rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-xs ring-1 ring-gray-900/5">
                         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
                             Available Opportunities
                         </h2>
@@ -69,7 +69,7 @@ export default function Licensing() {
                     </div>
 
                     {/* Contact Information */}
-                    <div className="rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-sm ring-1 ring-gray-900/5">
+                    <div className="rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-xs ring-1 ring-gray-900/5">
                         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
                             Get Started
                         </h2>
@@ -122,7 +122,7 @@ export default function Licensing() {
                             <div className="pt-4">
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                                    className="inline-flex items-center rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                                 >
                                     Contact Us
                                     <ArrowRightIcon className="ml-2 h-4 w-4" />

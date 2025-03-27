@@ -69,7 +69,7 @@ export default function Press() {
                     {pressVideos.map((video, index) => (
                         <div
                             key={video.videoId}
-                            className="flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-sm ring-1 ring-gray-900/5"
+                            className="flex flex-col overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xs ring-1 ring-gray-900/5"
                         >
                             <div className="aspect-video">
                                 <iframe

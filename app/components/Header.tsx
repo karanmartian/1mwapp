@@ -48,7 +48,7 @@ export default function Header() {
 
     return (
         <>
-            <header className="fixed inset-x-0 top-0 z-40 bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
+            <header className="fixed inset-x-0 top-0 z-40 bg-white/90 dark:bg-gray-950/90 backdrop-blur-xs border-b border-gray-200 dark:border-gray-800">
                 <nav
                     className="flex items-center justify-between p-4 lg:px-8 max-w-7xl mx-auto"
                     aria-label="Global"
@@ -126,7 +126,7 @@ export default function Header() {
                         </button>
                         <Link
                             href="/contact"
-                            className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
+                            className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
                         >
                             Contact Us
                         </Link>
@@ -136,7 +136,7 @@ export default function Header() {
                 {/* Mobile menu */}
                 {mobileMenuOpen && (
                     <div
-                        className="lg:hidden fixed inset-0 z-50 bg-gray-900/50 backdrop-blur-sm"
+                        className="lg:hidden fixed inset-0 z-50 bg-gray-900/50 backdrop-blur-xs"
                         onClick={() => setMobileMenuOpen(false)}
                     >
                         <div
@@ -211,7 +211,7 @@ export default function Header() {
                                         </div>
                                         <Link
                                             href="/contact"
-                                            className="block rounded-full bg-blue-600 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                                            className="block rounded-full bg-blue-600 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                                             onClick={() =>
                                                 setMobileMenuOpen(false)
                                             }

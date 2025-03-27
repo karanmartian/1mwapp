@@ -17,7 +17,7 @@ export default function Home() {
                             className="object-cover object-center"
                             priority
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 to-gray-900/30 dark:from-gray-950/70 dark:to-gray-950/30" />
+                        <div className="absolute inset-0 bg-linear-to-r from-gray-900/70 to-gray-900/30 dark:from-gray-950/70 dark:to-gray-950/30" />
                     </div>
 
                     <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:px-8 relative">
@@ -46,7 +46,7 @@ export default function Home() {
                             <div className="mt-8 flex items-center gap-x-6">
                                 <Link
                                     href="/products"
-                                    className="rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
+                                    className="rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
                                 >
                                     Explore Products
                                 </Link>

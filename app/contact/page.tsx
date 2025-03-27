@@ -67,7 +67,7 @@ export default function Contact() {
                     </p>
                 </div>
 
-                <div className="mx-auto mt-12 max-w-2xl bg-white dark:bg-gray-800 rounded-2xl shadow-sm ring-1 ring-gray-900/5 p-8">
+                <div className="mx-auto mt-12 max-w-2xl bg-white dark:bg-gray-800 rounded-2xl shadow-xs ring-1 ring-gray-900/5 p-8">
                     <div className="grid grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-2">
                         {/* Contact Information */}
                         <div className="space-y-6">
@@ -147,7 +147,7 @@ export default function Contact() {
                                         type="text"
                                         name="name"
                                         id="name"
-                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white sm:text-sm"
+                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white sm:text-sm"
                                     />
                                 </div>
                                 <div>
@@ -161,7 +161,7 @@ export default function Contact() {
                                         type="email"
                                         name="email"
                                         id="email"
-                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white sm:text-sm"
+                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white sm:text-sm"
                                     />
                                 </div>
                                 <div>
@@ -175,14 +175,14 @@ export default function Contact() {
                                         id="message"
                                         name="message"
                                         rows={4}
-                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white sm:text-sm"
+                                        className="mt-1 block w-full rounded-md border-gray-300 shadow-xs focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white sm:text-sm"
                                     />
                                 </div>
                                 <div>
                                     <button
                                         type="submit"
                                         disabled={status === "sending"}
-                                        className="rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {status === "sending"
                                             ? "Sending..."

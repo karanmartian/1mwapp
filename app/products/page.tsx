@@ -16,7 +16,7 @@ const products = [
             "Advanced industrial drones for various applications including surveillance, mapping, inspection, and delivery.",
         category: "Drones",
         href: "/contact",
-        image: "/assets/img/products/industrux.jpg",
+        image: "/assets/img/products/industrial-drone.jpg",
     },
     {
         name: "1MW xFleetY",
@@ -32,7 +32,7 @@ const products = [
             "Advanced change detection software for infrastructure assets. Monitor and analyze changes using cutting-edge aerial imagery.",
         category: "Software",
         href: "/geospatial",
-        image: "/assets/img/products/airdiff.jpg",
+        image: "/assets/img/products/change-detection.jpg",
     },
     {
         name: "1MW BackDuck",

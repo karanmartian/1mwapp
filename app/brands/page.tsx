@@ -61,7 +61,7 @@ export default function Brands() {
                                     href="https://droneracingindia.com"
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="inline-flex items-center rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                                    className="inline-flex items-center rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                                 >
                                     Visit Website
                                     <ArrowTopRightIcon className="ml-2 h-4 w-4" />
@@ -109,7 +109,7 @@ export default function Brands() {
                             <div className="mt-6">
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                                    className="inline-flex items-center rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                                 >
                                     Contact Us
                                     <ArrowTopRightIcon className="ml-2 h-4 w-4" />

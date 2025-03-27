@@ -46,7 +46,7 @@ export default function Home() {
                             <div className="mt-8 flex items-center gap-x-6">
                                 <Link
                                     href="/products"
-                                    className="rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
+                                    className="rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-xs hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
                                 >
                                     Explore Products
                                 </Link>

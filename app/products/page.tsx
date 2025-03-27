@@ -16,7 +16,7 @@ const products = [
             "Advanced industrial drones for various applications including surveillance, mapping, inspection, and delivery.",
         category: "Drones",
         href: "/contact",
-        image: "/assets/img/products/industrial-drone.jpg",
+        image: "/assets/img/products/industrux.jpg",
     },
     {
         name: "1MW xFleetY",

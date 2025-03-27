@@ -32,7 +32,7 @@ const products = [
             "Advanced change detection software for infrastructure assets. Monitor and analyze changes using cutting-edge aerial imagery.",
         category: "Software",
         href: "/geospatial",
-        image: "/assets/img/products/change-detection.jpg",
+        image: "/assets/img/products/airdiff.jpg",
     },
     {
         name: "1MW BackDuck",

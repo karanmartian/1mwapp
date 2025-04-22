@@ -18,16 +18,16 @@ export default function Privacy() {
     return (
         <div className="bg-white dark:bg-gray-900 pt-[56px] lg:pt-[64px]">
             <div className="mx-auto max-w-7xl px-6 py-8 sm:py-12 lg:px-8">
-                <div className="mx-auto max-w-2xl lg:mx-0">
+                <div className="mx-auto max-w-2xl text-center">
                     <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                        Privacy Policy
+                        Privacy Policy | DR2U App
                     </h1>
                     <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                        Last Updated: March 26, 2024
+                        Last Updated: April 22, 2025
                     </p>
                 </div>
 
-                <div className="mx-auto mt-8 max-w-3xl space-y-8 lg:mx-0">
+                <div className="mx-auto mt-8 max-w-2xl space-y-8">
                     {/* Introduction */}
                     <div className="rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-xs ring-1 ring-gray-900/5">
                         <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">

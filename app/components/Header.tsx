@@ -161,17 +161,25 @@ export default function Header() {
                 </nav>
 
                 {/* Mobile menu */}
-                {mobileMenuOpen && (
-                    <>
-                        <div
-                            className="lg:hidden fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
-                            onClick={() => setMobileMenuOpen(false)}
-                        />
-                        <div className="lg:hidden fixed inset-y-0 right-0 z-50 w-full overflow-y-auto glass-dark px-6 py-6 sm:max-w-sm border-l border-white/10 transform transition-transform duration-300 ease-in-out">
-                            <div className="flex items-center justify-between">
+                <div className={`lg:hidden fixed inset-0 z-40 transition-opacity duration-300 ease-in-out ${
+                    mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}>
+                    {/* Backdrop */}
+                    <div
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+                        onClick={() => setMobileMenuOpen(false)}
+                    />
+                    
+                    {/* Slide-in menu panel */}
+                    <div className={`fixed inset-y-0 left-0 z-50 w-80 max-w-[85vw] overflow-y-auto glass-dark border-r border-white/10 transform transition-transform duration-300 ease-in-out ${
+                        mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                    }`}>
+                        <div className="px-6 py-6">
+                            {/* Header with logo and close button */}
+                            <div className="flex items-center justify-between mb-8">
                                 <Link
                                     href="/"
-                                    className="-m-1.5 p-1.5 flex items-center gap-3 group"
+                                    className="flex items-center gap-3 group"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     <Image
@@ -187,7 +195,7 @@ export default function Header() {
                                 </Link>
                                 <button
                                     type="button"
-                                    className="glass rounded-xl p-3 text-white/90 hover:text-white transition-all-smooth"
+                                    className="glass rounded-xl p-3 text-white/90 hover:text-white transition-all-smooth hover:scale-105"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     <span className="sr-only">Close menu</span>
@@ -197,54 +205,69 @@ export default function Header() {
                                     />
                                 </button>
                             </div>
-                            <div className="mt-8 flow-root">
-                                <div className="space-y-3">
-                                    {navigation.map((item) => (
+
+                            {/* Navigation links */}
+                            <div className="space-y-2">
+                                {navigation.map((item, index) => (
+                                    <div key={item.name} 
+                                         className={`transform transition-all duration-300 ease-out ${
+                                             mobileMenuOpen 
+                                                 ? 'translate-x-0 opacity-100' 
+                                                 : 'translate-x-4 opacity-0'
+                                         }`}
+                                         style={{ transitionDelay: `${index * 50}ms` }}>
                                         <Link
-                                            key={item.name}
                                             href={item.href}
-                                            className={`block px-4 py-3 text-base font-semibold rounded-xl transition-all-smooth ${
+                                            className={`flex items-center px-4 py-3 text-base font-semibold rounded-xl transition-all-smooth hover:scale-[1.02] ${
                                                 pathname === item.href
-                                                    ? "glass text-white shadow-lg"
+                                                    ? "glass text-white shadow-lg glow"
                                                     : "text-white/80 hover:text-white hover:glass"
                                             }`}
-                                            onClick={() =>
-                                                setMobileMenuOpen(false)
-                                            }
+                                            onClick={() => setMobileMenuOpen(false)}
                                         >
-                                            {item.name}
-                                        </Link>
-                                    ))}
-                                </div>
-                                <div className="mt-8 pt-6 border-t border-white/10 space-y-4">
-                                    <div className="flex items-center justify-between">
-                                        <span className="text-sm text-white/70 font-medium">
-                                            Theme
-                                        </span>
-                                        <button
-                                            onClick={toggleTheme}
-                                            className="glass rounded-xl p-3 text-white/90 hover:text-white transition-all-smooth"
-                                            aria-label="Toggle theme"
-                                        >
-                                            {mounted && theme === "dark" ? (
-                                                <SunIcon className="h-5 w-5" />
-                                            ) : (
-                                                <MoonIcon className="h-5 w-5" />
+                                            <span>{item.name}</span>
+                                            {pathname === item.href && (
+                                                <div className="ml-auto w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
                                             )}
-                                        </button>
+                                        </Link>
                                     </div>
-                                    <Link
-                                        href="/contact"
-                                        className="block w-full px-6 py-3 text-center text-sm font-semibold text-white rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all-smooth shadow-lg"
-                                        onClick={() => setMobileMenuOpen(false)}
+                                ))}
+                            </div>
+
+                            {/* Footer section with theme toggle and contact */}
+                            <div className={`mt-8 pt-6 border-t border-white/10 space-y-4 transform transition-all duration-300 ease-out ${
+                                mobileMenuOpen 
+                                    ? 'translate-x-0 opacity-100' 
+                                    : 'translate-x-4 opacity-0'
+                            }`} style={{ transitionDelay: `${navigation.length * 50}ms` }}>
+                                <div className="flex items-center justify-between">
+                                    <span className="text-sm text-white/70 font-medium">
+                                        Theme
+                                    </span>
+                                    <button
+                                        onClick={toggleTheme}
+                                        className="glass rounded-xl p-3 text-white/90 hover:text-white transition-all-smooth hover:scale-105 glow-hover"
+                                        aria-label="Toggle theme"
                                     >
-                                        Contact Us
-                                    </Link>
+                                        {mounted && theme === "dark" ? (
+                                            <SunIcon className="h-5 w-5" />
+                                        ) : (
+                                            <MoonIcon className="h-5 w-5" />
+                                        )}
+                                    </button>
                                 </div>
+                                <Link
+                                    href="/contact"
+                                    className="block w-full px-6 py-3 text-center text-sm font-semibold text-white rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all-smooth hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden group"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-all-smooth blur-xl"></div>
+                                    <span className="relative z-10">Contact Us</span>
+                                </Link>
                             </div>
                         </div>
-                    </>
-                )}
+                    </div>
+                </div>
             </header>
         </>
     );

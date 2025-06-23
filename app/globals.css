@@ -242,6 +242,13 @@
         background-clip: text;
     }
     
+    .gradient-text-orange {
+        background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #dc2626 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
     /* Glow effects */
     .glow {
         filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));

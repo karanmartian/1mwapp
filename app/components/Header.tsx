@@ -23,7 +23,7 @@ const navigation = [
             { name: "Robot Spatial Intelligence", href: "/geospatial" },
         ]
     },
-    { name: "Divisions", href: "/brands" },
+    { name: "Brands", href: "/brands" },
     { name: "Press", href: "/press" },
 ];
 

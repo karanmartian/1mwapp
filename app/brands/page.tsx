@@ -3,192 +3,309 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Humanoid Robot Divisions | 1 Martian Way",
+    title: "Our Brands & Divisions | 1 Martian Way",
     description:
-        "1 Martian Way divisions focused on humanoid robotics, AI consciousness, and human-robot collaboration technologies.",
+        "Discover 1 Martian Way's innovative brands including IDRL Drone Racing India, Consciousness Labs, and Integration Studios - pioneering the future of AI and robotics.",
 };
 
 export default function Brands() {
     return (
         <>
             <div className="mx-auto max-w-7xl px-6 py-6 sm:py-8 lg:px-8">
+                {/* Hero Section */}
                 <div className="mx-auto max-w-4xl text-center mb-16">
                     <h1 className="font-display text-2xl font-bold tracking-tight text-white sm:text-4xl mb-6">
-                        Our <span className="gradient-text-primary">Humanoid</span> Divisions
+                        Our <span className="gradient-text-primary">Innovation</span> Ecosystem
                     </h1>
-                    <p className="text-lg leading-8 text-white/80 max-w-2xl mx-auto">
-                        Specialized divisions advancing the frontiers of humanoid robotics, 
-                        AI consciousness, and human-robot collaboration across multiple industries.
+                    <p className="text-lg leading-8 text-white/80 max-w-2xl mx-auto mb-8">
+                        From cutting-edge drone racing technology to conscious AI development, 
+                        our brands are pushing the boundaries of what's possible in robotics and automation.
                     </p>
+                    <div className="flex items-center justify-center gap-4 text-sm text-white/60">
+                        <span className="flex items-center gap-2">
+                            <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                            Racing Technology
+                        </span>
+                        <span className="flex items-center gap-2">
+                            <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                            AI Research
+                        </span>
+                        <span className="flex items-center gap-2">
+                            <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                            Human-Robot Integration
+                        </span>
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                    {/* Martian Consciousness Labs */}
-                    <div className="glass-card rounded-3xl overflow-hidden hover:scale-105 transition-all-smooth group">
-                        <div className="aspect-video bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900 relative overflow-hidden">
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="text-center">
-                                    <div className="text-6xl mb-4">🧠</div>
-                                    <h3 className="text-2xl font-bold text-white gradient-text-primary">
-                                        Martian Consciousness Labs
-                                    </h3>
-                                    <p className="text-white/70 mt-2">AI Consciousness Research Division</p>
-                                </div>
-                            </div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                        </div>
-                        <div className="p-8">
-                            <div className="flex-1">
-                                <h3 className="text-xl font-semibold text-white mb-4 gradient-text-primary">
-                                    Martian Consciousness Labs
-                                </h3>
-                                <p className="text-base text-white/80 mb-4">
-                                    Our premier research division dedicated to developing artificial consciousness 
-                                    for humanoid robots. We pioneer breakthrough technologies in neural networks, 
-                                    emotional intelligence, and self-aware AI systems that power the next generation 
-                                    of conscious robots.
-                                </p>
-                                <p className="text-base text-white/80 mb-6">
-                                    Since our establishment, we've developed the world's first commercial consciousness 
-                                    platform for humanoid robots, enabling them to think, feel, and make autonomous 
-                                    decisions while maintaining ethical guidelines and human compatibility.
-                                </p>
-                                
-                                {/* Key Achievements */}
-                                <div className="grid grid-cols-2 gap-3 mb-6">
-                                    {[
-                                        "100+ Conscious AI Models",
-                                        "Real-time Emotion Processing",
-                                        "Autonomous Learning Systems",
-                                        "Ethical AI Framework"
-                                    ].map((achievement, i) => (
-                                        <div key={i} className="flex items-center gap-2 text-sm text-white/70">
-                                            <span className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
-                                            {achievement}
+                {/* Featured Brand - IDRL */}
+                <div className="mb-16">
+                    <div className="glass-card rounded-3xl overflow-hidden">
+                        <div className="bg-gradient-to-br from-orange-900/40 via-red-900/30 to-slate-900/40 p-12">
+                            <div className="flex flex-col lg:flex-row items-center gap-12">
+                                <div className="flex-1 text-center lg:text-left">
+                                    <div className="flex items-center justify-center lg:justify-start gap-4 mb-6">
+                                        <div className="text-6xl">🏁</div>
+                                        <div>
+                                            <h2 className="font-display text-3xl font-bold text-white sm:text-4xl mb-2">
+                                                <span className="gradient-text-orange">IDRL</span>
+                                            </h2>
+                                            <p className="text-xl text-orange-300 font-semibold">Drone Racing India</p>
+                                            <p className="text-orange-200/80 text-sm">Featured Brand</p>
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
-                            <div>
-                                <Link
-                                    href="/artificialintelligence"
-                                    className="inline-flex items-center px-4 py-2.5 text-sm font-semibold text-white rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all-smooth hover:scale-105 shadow-lg"
-                                >
-                                    Explore AI Platform
-                                    <ArrowTopRightIcon className="ml-2 h-4 w-4" />
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
+                                    </div>
+                                    <p className="text-lg text-white/90 mb-6 leading-relaxed">
+                                        India's premier autonomous drone racing platform, where AI meets extreme sports. 
+                                        IDRL combines our advanced AI consciousness technology with high-speed autonomous flight, 
+                                        creating the world's most sophisticated racing drones.
+                                    </p>
+                                    
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                                        {[
+                                            { value: "300+", label: "Racing Events", icon: "🏆" },
+                                            { value: "50ms", label: "AI Response Time", icon: "⚡" },
+                                            { value: "200+", label: "Km/h Max Speed", icon: "🚀" },
+                                            { value: "15+", label: "Racing Teams", icon: "👥" },
+                                        ].map((stat, index) => (
+                                            <div key={index} className="glass rounded-xl p-4 text-center">
+                                                <div className="text-2xl mb-2">{stat.icon}</div>
+                                                <div className="text-xl font-bold gradient-text-orange font-display mb-1">
+                                                    {stat.value}
+                                                </div>
+                                                <div className="text-xs text-white/70">
+                                                    {stat.label}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
 
-                    {/* Humanoid Integration Studios */}
-                    <div className="glass-card rounded-3xl overflow-hidden hover:scale-105 transition-all-smooth group">
-                        <div className="aspect-video bg-gradient-to-br from-purple-900 via-cyan-900 to-slate-900 relative overflow-hidden">
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="text-center">
-                                    <div className="text-6xl mb-4">🤖</div>
-                                    <h3 className="text-2xl font-bold text-white gradient-text-cyan">
-                                        Humanoid Integration Studios
-                                    </h3>
-                                    <p className="text-white/70 mt-2">Human-Robot Collaboration Division</p>
+                                    <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                                        <a
+                                            href="https://droneracingindia.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="group relative px-8 py-4 text-lg font-semibold text-white rounded-2xl bg-gradient-to-r from-orange-600 via-red-600 to-orange-600 hover:from-orange-500 hover:via-red-500 hover:to-orange-500 transition-all-smooth hover:scale-105 shadow-xl"
+                                        >
+                                            <span className="flex items-center gap-2">
+                                                🌐 Visit IDRL Website
+                                                <ArrowTopRightIcon className="h-5 w-5" />
+                                            </span>
+                                        </a>
+                                        <Link
+                                            href="/contact"
+                                            className="group px-8 py-4 text-lg font-semibold text-white/90 hover:text-white glass rounded-2xl hover:glass-card transition-all-smooth"
+                                        >
+                                            <span className="flex items-center gap-2">
+                                                🤝 Partner with IDRL
+                                                <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                                            </span>
+                                        </Link>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                        </div>
-                        <div className="p-8">
-                            <div className="flex-1">
-                                <h3 className="text-xl font-semibold text-white mb-4 gradient-text-cyan">
-                                    Humanoid Integration Studios
-                                </h3>
-                                <p className="text-base text-white/80 mb-4">
-                                    Specialized in seamless human-robot collaboration experiences. We design and develop 
-                                    interaction protocols, social behavior systems, and collaborative frameworks that 
-                                    enable humanoid robots to work naturally alongside humans in various environments.
-                                </p>
-                                <p className="text-base text-white/80 mb-6">
-                                    Our studio creates immersive experiences using cutting-edge humanoid robotics 
-                                    technology, perfect for research institutions, corporate training programs, 
-                                    and demonstration of future human-robot societies.
-                                </p>
-                                
-                                {/* Key Services */}
-                                <div className="grid grid-cols-2 gap-3 mb-6">
-                                    {[
-                                        "Collaboration Protocols",
-                                        "Social Behavior Design",
-                                        "Integration Training",
-                                        "Custom Robot Solutions"
-                                    ].map((service, i) => (
-                                        <div key={i} className="flex items-center gap-2 text-sm text-white/70">
-                                            <span className="w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></span>
-                                            {service}
+                                <div className="flex-shrink-0">
+                                    <div className="glass rounded-3xl p-8 text-center max-w-sm">
+                                        <div className="text-8xl mb-6">🚁</div>
+                                        <h3 className="text-xl font-bold text-white mb-4">Autonomous Racing Technology</h3>
+                                        <p className="text-sm text-white/80 mb-6">
+                                            Revolutionary AI-powered racing drones with real-time decision making, 
+                                            obstacle avoidance, and competitive intelligence.
+                                        </p>
+                                        <div className="grid grid-cols-1 gap-3">
+                                            {[
+                                                "Neural Flight Control",
+                                                "Real-time Path Planning",
+                                                "Competitive AI Strategy",
+                                                "Safety-First Protocols"
+                                            ].map((feature, i) => (
+                                                <div key={i} className="glass rounded-lg p-3 text-xs text-white/80">
+                                                    {feature}
+                                                </div>
+                                            ))}
                                         </div>
-                                    ))}
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <Link
-                                    href="/contact"
-                                    className="inline-flex items-center px-4 py-2.5 text-sm font-semibold text-white rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 transition-all-smooth hover:scale-105 shadow-lg"
-                                >
-                                    Schedule Integration
-                                    <ArrowTopRightIcon className="ml-2 h-4 w-4" />
-                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Research Initiatives */}
-                <div className="mt-16 glass-card rounded-3xl p-12">
+                {/* Research Divisions */}
+                <div className="mb-16">
                     <div className="text-center mb-12">
                         <h2 className="font-display text-3xl font-bold text-white sm:text-4xl mb-4">
-                            Research <span className="gradient-text-primary">Initiatives</span>
+                            Research <span className="gradient-text-primary">Divisions</span>
                         </h2>
                         <p className="text-lg text-white/80 max-w-3xl mx-auto">
-                            Our ongoing research projects that push the boundaries of humanoid robotics and AI consciousness.
+                            Our specialized research divisions advancing the frontiers of AI consciousness and human-robot collaboration.
                         </p>
                     </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            {
-                                title: "Emotional AI",
-                                description: "Developing empathetic responses in humanoid robots",
-                                icon: "❤️",
-                                progress: "Advanced Testing"
-                            },
-                            {
-                                title: "Collective Intelligence",
-                                description: "Multi-robot consciousness networks and collaboration",
-                                icon: "🌐",
-                                progress: "Research Phase"
-                            },
-                            {
-                                title: "Ethical AI",
-                                description: "Building moral decision-making frameworks",
-                                icon: "⚖️",
-                                progress: "Implementation"
-                            }
-                        ].map((initiative, index) => (
-                            <div key={index} className="text-center glass rounded-3xl p-6 hover:scale-105 transition-all-smooth">
-                                <div className="text-4xl mb-4">{initiative.icon}</div>
-                                <h3 className="text-lg font-semibold text-white mb-2 gradient-text-primary">{initiative.title}</h3>
-                                <p className="text-sm text-white/70 mb-3">{initiative.description}</p>
-                                <div className="text-xs text-cyan-400 font-medium">{initiative.progress}</div>
+
+                    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                        {/* Martian Consciousness Labs */}
+                        <div className="glass-card rounded-3xl overflow-hidden hover:scale-105 transition-all-smooth group">
+                            <div className="aspect-video bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900 relative overflow-hidden">
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="text-center">
+                                        <div className="text-6xl mb-4">🧠</div>
+                                        <h3 className="text-2xl font-bold text-white gradient-text-primary">
+                                            Consciousness Labs
+                                        </h3>
+                                        <p className="text-white/70 mt-2">AI Consciousness Research</p>
+                                    </div>
+                                </div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                             </div>
-                        ))}
+                            <div className="p-8">
+                                <div className="flex-1">
+                                    <h3 className="text-xl font-semibold text-white mb-4 gradient-text-primary">
+                                        Martian Consciousness Labs
+                                    </h3>
+                                    <p className="text-base text-white/80 mb-4">
+                                        Pioneering the development of artificial consciousness for humanoid robots. 
+                                        Our research focuses on neural networks, emotional intelligence, and self-aware AI systems.
+                                    </p>
+                                    
+                                    {/* Key Achievements */}
+                                    <div className="grid grid-cols-2 gap-3 mb-6">
+                                        {[
+                                            "Neural Consciousness Engine",
+                                            "Emotional AI Processing",
+                                            "Autonomous Learning Systems",
+                                            "Ethical AI Framework"
+                                        ].map((achievement, i) => (
+                                            <div key={i} className="flex items-center gap-2 text-sm text-white/70">
+                                                <span className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
+                                                {achievement}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div>
+                                    <Link
+                                        href="/artificialintelligence"
+                                        className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all-smooth hover:scale-105 shadow-lg"
+                                    >
+                                        Explore AI Research
+                                        <ArrowTopRightIcon className="ml-2 h-4 w-4" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Humanoid Integration Studios */}
+                        <div className="glass-card rounded-3xl overflow-hidden hover:scale-105 transition-all-smooth group">
+                            <div className="aspect-video bg-gradient-to-br from-purple-900 via-cyan-900 to-slate-900 relative overflow-hidden">
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="text-center">
+                                        <div className="text-6xl mb-4">🤖</div>
+                                        <h3 className="text-2xl font-bold text-white gradient-text-cyan">
+                                            Integration Studios
+                                        </h3>
+                                        <p className="text-white/70 mt-2">Human-Robot Collaboration</p>
+                                    </div>
+                                </div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                            </div>
+                            <div className="p-8">
+                                <div className="flex-1">
+                                    <h3 className="text-xl font-semibold text-white mb-4 gradient-text-cyan">
+                                        Humanoid Integration Studios
+                                    </h3>
+                                    <p className="text-base text-white/80 mb-4">
+                                        Designing seamless human-robot collaboration experiences through advanced 
+                                        interaction protocols, social behavior systems, and collaborative frameworks.
+                                    </p>
+                                    
+                                    {/* Key Services */}
+                                    <div className="grid grid-cols-2 gap-3 mb-6">
+                                        {[
+                                            "Collaboration Protocols",
+                                            "Social Behavior Design",
+                                            "Integration Training",
+                                            "Custom Robot Solutions"
+                                        ].map((service, i) => (
+                                            <div key={i} className="flex items-center gap-2 text-sm text-white/70">
+                                                <span className="w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></span>
+                                                {service}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div>
+                                    <Link
+                                        href="/contact"
+                                        className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white rounded-2xl bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 transition-all-smooth hover:scale-105 shadow-lg"
+                                    >
+                                        Schedule Integration
+                                        <ArrowTopRightIcon className="ml-2 h-4 w-4" />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                {/* CTA Section */}
-                <div className="mt-16 glass-card rounded-3xl p-12 text-center">
+                {/* Innovation Showcase */}
+                <div className="mb-16">
+                    <div className="glass-card rounded-3xl p-12">
+                        <div className="text-center mb-12">
+                            <h2 className="font-display text-3xl font-bold text-white sm:text-4xl mb-4">
+                                Innovation <span className="gradient-text-cyan">Showcase</span>
+                            </h2>
+                            <p className="text-lg text-white/80 max-w-3xl mx-auto">
+                                Cross-brand collaborations and breakthrough technologies emerging from our ecosystem.
+                            </p>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[
+                                {
+                                    title: "AI-Powered Racing",
+                                    description: "IDRL's racing algorithms adapted for humanoid robot navigation",
+                                    icon: "🏎️",
+                                    brands: ["IDRL", "Consciousness Labs"],
+                                    status: "Active Development"
+                                },
+                                {
+                                    title: "Collaborative Swarms",
+                                    description: "Multi-robot consciousness networks for coordinated operations",
+                                    icon: "🌐",
+                                    brands: ["Consciousness Labs", "Integration Studios"],
+                                    status: "Research Phase"
+                                },
+                                {
+                                    title: "Racing-Grade Reflexes",
+                                    description: "Ultra-fast response systems for humanoid safety protocols",
+                                    icon: "⚡",
+                                    brands: ["IDRL", "Integration Studios"],
+                                    status: "Testing Phase"
+                                }
+                            ].map((innovation, index) => (
+                                <div key={index} className="glass rounded-3xl p-6 text-center hover:scale-105 transition-all-smooth">
+                                    <div className="text-5xl mb-4">{innovation.icon}</div>
+                                    <h3 className="text-lg font-semibold text-white mb-2 gradient-text-primary">{innovation.title}</h3>
+                                    <p className="text-sm text-white/80 mb-4">{innovation.description}</p>
+                                    <div className="flex flex-wrap gap-2 justify-center mb-4">
+                                        {innovation.brands.map((brand, i) => (
+                                            <span key={i} className="glass rounded-full px-3 py-1 text-xs text-cyan-300 font-medium">
+                                                {brand}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <div className="text-xs text-purple-400 font-medium">{innovation.status}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Partnership CTA */}
+                <div className="glass-card rounded-3xl p-12 text-center">
                     <h2 className="font-display text-3xl font-bold text-white sm:text-4xl mb-6">
-                        Join Our <span className="gradient-text-primary">Humanoid Revolution</span>
+                        Join Our <span className="gradient-text-primary">Innovation</span> Ecosystem
                     </h2>
                     <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8">
-                        Partner with our specialized divisions to advance humanoid robotics, develop conscious AI, 
-                        and create the future of human-robot collaboration.
+                        Partner with our brands to access cutting-edge AI technology, racing innovations, 
+                        and the future of human-robot collaboration.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <Link
@@ -196,13 +313,13 @@ export default function Brands() {
                             className="group relative px-8 py-4 text-lg font-semibold text-white rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:from-blue-500 hover:via-purple-500 hover:to-cyan-500 transition-all-smooth hover:scale-105 shadow-2xl overflow-hidden"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-all-smooth blur-xl"></div>
-                            <span className="relative z-10">Partner With Us</span>
+                            <span className="relative z-10">Partner With Our Brands</span>
                         </Link>
                         <Link
-                            href="/products"
-                            className="group text-lg font-semibold text-white/80 hover:text-white transition-colors"
+                            href="/press"
+                            className="group text-lg font-semibold leading-6 text-white/80 hover:text-white flex items-center gap-2"
                         >
-                            View Our Robots{" "}
+                            Latest Brand Updates
                             <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
                         </Link>
                     </div>

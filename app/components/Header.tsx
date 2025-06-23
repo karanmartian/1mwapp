@@ -2,9 +2,7 @@
 
 import {
     Cross1Icon,
-    HamburgerMenuIcon,
-    MoonIcon,
-    SunIcon,
+    HamburgerMenuIcon
 } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -139,17 +137,6 @@ export default function Header() {
                     </div>
 
                     <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4 items-center">
-                        <button
-                            onClick={toggleTheme}
-                            className="glass rounded-xl p-3 text-white/90 hover:text-white transition-all-smooth hover:scale-105 glow-hover"
-                            aria-label="Toggle theme"
-                        >
-                            {mounted && theme === "dark" ? (
-                                <SunIcon className="h-5 w-5" />
-                            ) : (
-                                <MoonIcon className="h-5 w-5" />
-                            )}
-                        </button>
                         <Link
                             href="/contact"
                             className="relative px-6 py-3 text-sm font-semibold text-white rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all-smooth hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden group"
@@ -240,22 +227,6 @@ export default function Header() {
                                 ? 'translate-x-0 opacity-100' 
                                 : 'translate-x-4 opacity-0'
                         }`} style={{ transitionDelay: `${navigation.length * 50}ms` }}>
-                            <div className="flex items-center justify-between">
-                                <span className="text-sm text-white/70 font-medium">
-                                    Theme
-                                </span>
-                                <button
-                                    onClick={toggleTheme}
-                                    className="glass rounded-xl p-3 text-white/90 hover:text-white transition-all-smooth hover:scale-105 glow-hover"
-                                    aria-label="Toggle theme"
-                                >
-                                    {mounted && theme === "dark" ? (
-                                        <SunIcon className="h-5 w-5" />
-                                    ) : (
-                                        <MoonIcon className="h-5 w-5" />
-                                    )}
-                                </button>
-                            </div>
                             <Link
                                 href="/contact"
                                 className="block w-full px-6 py-3 text-center text-sm font-semibold text-white rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all-smooth hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden group"

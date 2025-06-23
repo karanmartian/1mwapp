@@ -77,7 +77,7 @@ export default function Home() {
                                 </div>
                                 <div className="flex items-center gap-2 text-purple-300">
                                     <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                                    Advanced prototyping
+                                    Advanced Humanoids
                                 </div>
                                 <div className="flex items-center gap-2 text-orange-300">
                                     <span className="w-2 h-2 bg-orange-400 rounded-full"></span>

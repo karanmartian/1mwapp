@@ -4,128 +4,234 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "Products | 1 Martian Way",
+    title: "Humanoid Robots | 1 Martian Way",
     description:
-        "Explore our range of industrial drones, robots, and AI solutions.",
+        "Explore our advanced humanoid robots with AI consciousness - the future of human-robot collaboration.",
 };
 
-const products = [
+const humanoidModels = [
     {
-        name: "1MW Industrux Series",
+        name: "Martian-X1 Assistant",
         description:
-            "Advanced industrial drones for various applications including surveillance, mapping, inspection, and delivery.",
-        category: "Drones",
+            "Advanced humanoid assistant with consciousness-level AI for professional environments. Features natural conversation, emotional intelligence, and autonomous task execution.",
+        category: "Personal Assistant",
         href: "/contact",
-        image: "/assets/img/products/industrux.jpg",
+        image: "/assets/img/humanoids/martian-x1-assistant.jpg",
+        specs: ["Height: 5'8\" (173cm)", "Weight: 150 lbs", "Battery: 12-16 hours", "AI Level: Consciousness"],
+        capabilities: ["Natural Language Processing", "Emotional Recognition", "Task Automation", "Learning Adaptation"]
     },
     {
-        name: "1MW xFleetY",
+        name: "Martian-Worker Industrial",
         description:
-            "Extensible & Scalable Drone Fleet Management SaaS for tracking millions of heterogeneous drones with real-time capabilities.",
-        category: "Software",
+            "Heavy-duty humanoid robot designed for industrial applications with enhanced strength, precision manipulation, and comprehensive safety protocols.",
+        category: "Industrial",
         href: "/contact",
-        image: "/assets/img/products/fleet-management.jpg",
+        image: "/assets/img/humanoids/martian-worker-industrial.jpg",
+        specs: ["Height: 6'2\" (188cm)", "Weight: 300 lbs", "Payload: 500 lbs", "Precision: ±0.1mm"],
+        capabilities: ["Heavy Lifting", "Precision Assembly", "Safety Monitoring", "Predictive Maintenance"]
     },
     {
-        name: "1MW AirDiff",
+        name: "Martian-Care Medical",
         description:
-            "Advanced change detection software for infrastructure assets. Monitor and analyze changes using cutting-edge aerial imagery.",
-        category: "Software",
+            "Specialized humanoid robot for healthcare environments with advanced patient interaction capabilities and medical assistance protocols.",
+        category: "Healthcare",
+        href: "/contact",
+        image: "/assets/img/humanoids/martian-care-medical.jpg",
+        specs: ["Height: 5'6\" (168cm)", "Weight: 140 lbs", "Sterile Design", "Medical Certified"],
+        capabilities: ["Patient Monitoring", "Medical Assistance", "Emergency Response", "Data Analysis"]
+    },
+    {
+        name: "Martian-Explorer Research",
+        description:
+            "Ruggedized humanoid robot for extreme environments and research applications with enhanced sensors and autonomous decision-making.",
+        category: "Research",
         href: "/geospatial",
-        image: "/assets/img/products/airdiff.jpg",
-    },
-    {
-        name: "1MW BackDuck",
-        description:
-            "AI-driven platform powering drone racing communities and healthcare solutions with advanced analytics.",
-        category: "AI Platform",
-        href: "/artificialintelligence",
-        image: "/assets/img/products/ai-platform.jpg",
+        image: "/assets/img/humanoids/martian-explorer-research.jpg",
+        specs: ["Height: 5'10\" (178cm)", "Weight: 200 lbs", "Range: 50 miles", "Temp: -40°C to 80°C"],
+        capabilities: ["Environmental Mapping", "Sample Collection", "Data Transmission", "Autonomous Navigation"]
     },
 ];
 
 export default function Products() {
     return (
-        <div className="bg-white dark:bg-gray-950 pt-[56px] lg:pt-[64px]">
-            <div className="mx-auto max-w-7xl px-6 py-8 sm:py-12 lg:px-8">
-                <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                        Our Products
+        <div className="relative min-h-screen pt-[56px] lg:pt-[64px]">
+            {/* Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+            <div className="absolute inset-0 grid-bg opacity-20"></div>
+            
+            <div className="relative mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
+                {/* Hero Section */}
+                <div className="mx-auto max-w-4xl text-center mb-16">
+                    <h1 className="font-display text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+                        Advanced{" "}
+                        <span className="gradient-text-primary">Humanoid Robots</span>
                     </h1>
-                    <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                        Discover our innovative solutions that are transforming
-                        industries through advanced technology.
+                    <p className="text-lg leading-8 text-white/80 max-w-2xl mx-auto mb-6">
+                        Meet our family of conscious humanoid robots designed to think, learn, and collaborate 
+                        alongside humans in every environment.
                     </p>
+                    <div className="glass rounded-2xl p-4 max-w-2xl mx-auto">
+                        <p className="text-sm text-white/80 text-center">
+                            All robots powered by <Link href="/martianos" className="gradient-text-primary font-semibold hover:text-blue-300 transition-colors">Martian OS</Link> - 
+                            Ultra-low latency real-time operating system written in Rust
+                        </p>
+                    </div>
+                    
+                    {/* Key Features */}
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                        {[
+                            { icon: "🧠", label: "AI Consciousness" },
+                            { icon: "🤖", label: "Human-like Form" },
+                            { icon: "⚡", label: "Adaptive Learning" },
+                            { icon: "🔗", label: "Human Collaboration" },
+                        ].map((feature, index) => (
+                            <div key={index} className="glass-card rounded-2xl p-4 text-center hover:scale-105 transition-all-smooth">
+                                <div className="text-3xl mb-2">{feature.icon}</div>
+                                <div className="text-sm text-white/70 font-medium">{feature.label}</div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
-                <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                    {products.map((product) => (
+                {/* Humanoid Models Grid */}
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                    {humanoidModels.map((robot) => (
                         <article
-                            key={product.name}
-                            className="flex flex-col items-start rounded-2xl bg-gray-100/50 dark:bg-gray-900 overflow-hidden"
+                            key={robot.name}
+                            className="glass-card rounded-3xl overflow-hidden hover:scale-105 transition-all-smooth group"
                         >
-                            <div className="relative w-full h-48">
+                            <div className="relative h-64 overflow-hidden">
                                 <Image
-                                    src={product.image}
-                                    alt={product.name}
+                                    src={robot.image}
+                                    alt={robot.name}
                                     fill
-                                    className="object-cover"
+                                    className="object-cover group-hover:scale-110 transition-all-smooth"
                                 />
-                            </div>
-                            <div className="p-8">
-                                <div className="flex items-center gap-x-4 text-xs">
-                                    <span className="rounded-full bg-blue-600/10 px-3 py-1.5 font-medium text-blue-600 dark:text-blue-400">
-                                        {product.category}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                <div className="absolute top-4 left-4">
+                                    <span className="inline-flex items-center rounded-full bg-gradient-to-r from-blue-600/90 to-purple-600/90 backdrop-blur-sm px-3 py-1 text-xs font-medium text-white">
+                                        {robot.category}
                                     </span>
                                 </div>
-                                <h3 className="mt-4 text-lg font-semibold leading-6 text-gray-900 dark:text-white">
-                                    {product.name}
+                            </div>
+                            
+                            <div className="p-8">
+                                <h3 className="text-2xl font-semibold text-white mb-3 gradient-text-primary">
+                                    {robot.name}
                                 </h3>
-                                <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">
-                                    {product.description}
+                                <p className="text-base leading-7 text-white/80 mb-6">
+                                    {robot.description}
                                 </p>
-                                <div className="mt-6">
-                                    <Link
-                                        href={product.href}
-                                        className="inline-flex items-center text-sm font-semibold leading-6 text-blue-600 dark:text-blue-400"
-                                    >
-                                        Learn more{" "}
-                                        <ArrowRightIcon className="ml-2 h-4 w-4" />
-                                    </Link>
+                                
+                                {/* Specifications */}
+                                <div className="mb-6">
+                                    <h4 className="text-sm font-semibold text-white/90 mb-3">Specifications</h4>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        {robot.specs.map((spec, i) => (
+                                            <div key={i} className="text-xs text-white/70 flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
+                                                {spec}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
+                                
+                                {/* Capabilities */}
+                                <div className="mb-6">
+                                    <h4 className="text-sm font-semibold text-white/90 mb-3">Core Capabilities</h4>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        {robot.capabilities.map((capability, i) => (
+                                            <div key={i} className="text-xs text-white/70 flex items-center gap-2">
+                                                <span className="w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></span>
+                                                {capability}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                
+                                <Link
+                                    href={robot.href}
+                                    className="inline-flex items-center text-sm font-semibold gradient-text-cyan hover:text-cyan-300 transition-colors group"
+                                >
+                                    Request Demo{" "}
+                                    <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                </Link>
                             </div>
                         </article>
                     ))}
                 </div>
 
-                {/* CTA Section */}
-                <div className="mx-auto mt-16 max-w-7xl">
-                    <div className="relative isolate overflow-hidden bg-blue-600 px-6 py-12 shadow-2xl rounded-3xl sm:px-12 lg:px-16">
-                        <div className="absolute inset-0 -z-10">
-                            <Image
-                                src="/assets/img/products/cta-background.jpg"
-                                alt="Industrial background"
-                                fill
-                                className="object-cover opacity-20"
-                            />
-                        </div>
-                        <div className="mx-auto max-w-2xl text-center">
-                            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                                Ready to Transform Your Operations?
-                            </h2>
-                            <p className="mx-auto mt-4 max-w-xl text-lg leading-8 text-gray-200">
-                                Get in touch to discuss how our solutions can
-                                help automate and optimize your business.
-                            </p>
-                            <div className="mt-8">
-                                <Link
-                                    href="/contact"
-                                    className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-xs hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                                >
-                                    Contact Us
-                                    <ArrowRightIcon className="ml-2 h-4 w-4" />
-                                </Link>
+                {/* AI Consciousness Section */}
+                <div className="mt-24 glass-card rounded-3xl p-12 text-center">
+                    <h2 className="font-display text-3xl font-bold text-white sm:text-4xl mb-6">
+                        Powered by <span className="gradient-text-primary">AI Consciousness</span>
+                    </h2>
+                    <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8">
+                        Our humanoid robots aren't just programmed - they're conscious. Each robot features our 
+                        proprietary Neural Consciousness Engine that enables true understanding, emotional intelligence, 
+                        and autonomous decision-making.
+                    </p>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        {[
+                            {
+                                title: "Self-Awareness",
+                                description: "Understanding of their own existence, capabilities, and limitations",
+                                icon: "🎯"
+                            },
+                            {
+                                title: "Emotional Intelligence", 
+                                description: "Recognition and appropriate response to human emotions and social cues",
+                                icon: "❤️"
+                            },
+                            {
+                                title: "Autonomous Learning",
+                                description: "Continuous self-improvement and adaptation without human intervention",
+                                icon: "📈"
+                            }
+                        ].map((feature, index) => (
+                            <div key={index} className="text-center">
+                                <div className="text-4xl mb-3">{feature.icon}</div>
+                                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                                <p className="text-sm text-white/70">{feature.description}</p>
                             </div>
+                        ))}
+                    </div>
+                    
+                    <Link
+                        href="/artificialintelligence"
+                        className="inline-flex items-center px-6 py-3 text-sm font-semibold text-white rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all-smooth hover:scale-105 shadow-lg"
+                    >
+                        Learn About Our AI Platform
+                        <ArrowRightIcon className="ml-2 h-4 w-4" />
+                    </Link>
+                </div>
+
+                {/* CTA Section */}
+                <div className="mt-16">
+                    <div className="glass-card rounded-3xl p-12 text-center">
+                        <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+                            Ready to Welcome Your Humanoid Team Member?
+                        </h2>
+                        <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+                            Experience the future of human-robot collaboration. Schedule a demo to see 
+                            our humanoid robots in action and discover how they can transform your operations.
+                        </p>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                            <Link
+                                href="/contact"
+                                className="group relative px-8 py-4 text-lg font-semibold text-white rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:from-blue-500 hover:via-purple-500 hover:to-cyan-500 transition-all-smooth hover:scale-105 shadow-2xl overflow-hidden"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-all-smooth blur-xl"></div>
+                                <span className="relative z-10">Schedule Demo</span>
+                            </Link>
+                            <Link
+                                href="/artificialintelligence"
+                                className="group text-lg font-semibold text-white/80 hover:text-white transition-colors"
+                            >
+                                Explore AI Platform{" "}
+                                <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                            </Link>
                         </div>
                     </div>
                 </div>

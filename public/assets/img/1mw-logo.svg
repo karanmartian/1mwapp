@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="secondaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Circuit pattern -->
+    <pattern id="circuitPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none"/>
+      <path d="M10,10 L30,10 M20,10 L20,30 M10,30 L30,30" stroke="url(#secondaryGradient)" stroke-width="0.5" opacity="0.3"/>
+      <circle cx="10" cy="10" r="1" fill="url(#secondaryGradient)" opacity="0.5"/>
+      <circle cx="30" cy="10" r="1" fill="url(#secondaryGradient)" opacity="0.5"/>
+      <circle cx="20" cy="30" r="1" fill="url(#secondaryGradient)" opacity="0.5"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background circle with glow -->
+  <circle cx="60" cy="60" r="55" fill="url(#glowGradient)" filter="url(#glow)" opacity="0.6"/>
+  
+  <!-- Main background circle -->
+  <circle cx="60" cy="60" r="50" fill="rgba(15, 23, 42, 0.9)" stroke="url(#primaryGradient)" stroke-width="2"/>
+  
+  <!-- Circuit pattern overlay -->
+  <circle cx="60" cy="60" r="48" fill="url(#circuitPattern)" opacity="0.4"/>
+  
+  <!-- Main "1" character -->
+  <g transform="translate(35, 25)">
+    <!-- "1" with futuristic styling -->
+    <path d="M15 10 L25 10 L25 15 L20 15 L20 60 L30 60 L30 70 L10 70 L10 60 L15 60 Z" 
+          fill="url(#primaryGradient)" 
+          filter="url(#glow)"/>
+    
+    <!-- Accent lines for "1" -->
+    <rect x="12" y="15" width="16" height="2" fill="url(#secondaryGradient)" opacity="0.8"/>
+    <rect x="12" y="55" width="16" height="2" fill="url(#secondaryGradient)" opacity="0.8"/>
+  </g>
+  
+  <!-- "MW" text -->
+  <g transform="translate(55, 25)">
+    <!-- "M" -->
+    <path d="M5 15 L5 65 L10 65 L10 25 L15 35 L20 25 L20 65 L25 65 L25 15 L20 15 L15 25 L10 15 Z" 
+          fill="url(#primaryGradient)" 
+          filter="url(#glow)"/>
+    
+    <!-- "W" -->
+    <path d="M30 15 L30 65 L35 65 L35 25 L40 55 L45 25 L45 65 L50 65 L50 15 L45 15 L40 45 L35 15 Z" 
+          fill="url(#primaryGradient)" 
+          filter="url(#glow)"/>
+  </g>
+  
+  <!-- Orbital rings (representing Mars/space theme) -->
+  <circle cx="60" cy="60" r="42" fill="none" stroke="url(#secondaryGradient)" stroke-width="1" opacity="0.4" stroke-dasharray="5,5">
+    <animateTransform attributeName="transform" type="rotate" values="0 60 60;360 60 60" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="60" cy="60" r="38" fill="none" stroke="url(#secondaryGradient)" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,3">
+    <animateTransform attributeName="transform" type="rotate" values="360 60 60;0 60 60" dur="15s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Tech accent dots -->
+  <circle cx="25" cy="35" r="2" fill="url(#secondaryGradient)" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="95" cy="85" r="2" fill="url(#secondaryGradient)" opacity="0.7">
+    <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="85" cy="25" r="1.5" fill="url(#primaryGradient)" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Neural network connection lines -->
+  <g opacity="0.4">
+    <line x1="25" y1="35" x2="40" y2="45" stroke="url(#secondaryGradient)" stroke-width="1"/>
+    <line x1="85" y1="25" x2="75" y2="40" stroke="url(#secondaryGradient)" stroke-width="1"/>
+    <line x1="95" y1="85" x2="80" y2="75" stroke="url(#secondaryGradient)" stroke-width="1"/>
+  </g>
+</svg> 

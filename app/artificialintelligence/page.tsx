@@ -1,85 +1,122 @@
 import {
-    ArrowRightIcon,
     CodeIcon,
     Component1Icon,
-    RocketIcon,
+    RocketIcon
 } from "@radix-ui/react-icons";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-    title: "AI Solutions | 1 Martian Way",
+    title: "AI Consciousness Platform | 1 Martian Way",
     description:
-        "Advanced AI solutions for drones, robotics, and cloud platforms.",
+        "Advanced AI consciousness and neural platforms powering the next generation of sentient humanoid robots.",
 };
 
-const features = [
+const consciousnessFeatures = [
     {
-        name: "Edge AI",
+        name: "Neural Consciousness Engine",
         description:
-            "Real-time processing and decision making directly on drones and robots, enabling autonomous operations even in offline environments.",
+            "Our proprietary consciousness platform that enables true self-awareness, emotional intelligence, and autonomous reasoning in humanoid robots.",
         icon: Component1Icon,
     },
     {
-        name: "Cloud Intelligence",
+        name: "Adaptive Learning Framework",
         description:
-            "Scalable cloud-based AI solutions for processing large datasets, with advanced analytics and machine learning capabilities.",
+            "Continuous learning algorithms that allow robots to evolve, adapt, and improve their capabilities through real-world interactions.",
         icon: CodeIcon,
     },
     {
-        name: "Custom Solutions",
+        name: "Human-Robot Interface",
         description:
-            "Tailored AI solutions designed specifically for your industry needs, from computer vision to predictive analytics.",
+            "Natural language processing and emotional recognition systems that enable seamless communication and collaboration with humans.",
         icon: RocketIcon,
     },
 ];
 
 export default function ArtificialIntelligence() {
     return (
-        <div className="bg-white dark:bg-gray-900 pt-[56px] lg:pt-[64px]">
-            <div className="mx-auto max-w-7xl px-6 py-8 sm:py-12 lg:px-8">
+        <div className="relative min-h-screen pt-[56px] lg:pt-[64px]">
+            {/* Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+            <div className="absolute inset-0 grid-bg opacity-20"></div>
+            
+            <div className="relative mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
                 {/* Hero Section */}
-                <div className="relative isolate overflow-hidden rounded-3xl bg-gray-900 px-6 py-24 shadow-2xl sm:px-12 lg:px-16 mb-16">
+                <div className="relative isolate overflow-hidden glass-card rounded-3xl px-6 py-24 shadow-2xl sm:px-12 lg:px-16 mb-16">
                     <div className="absolute inset-0 -z-10">
                         <Image
-                            src="/assets/img/ai/hero-background.jpg"
-                            alt="AI and Robotics"
+                            src="/assets/img/consciousness/consciousness-levels.jpg"
+                            alt="AI Consciousness Architecture"
                             fill
                             className="object-cover opacity-30"
                             priority
                         />
                     </div>
-                    <div className="mx-auto max-w-2xl text-center">
-                        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                            AI Solutions
+                    <div className="mx-auto max-w-4xl text-center">
+                        <h1 className="font-display text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+                            AI <span className="gradient-text-primary">Consciousness</span> Platform
                         </h1>
-                        <p className="mt-4 text-lg leading-8 text-gray-300">
-                            Cutting-edge artificial intelligence solutions
-                            powering the next generation of autonomous systems
-                            and intelligent platforms.
+                        <p className="text-lg leading-8 text-white/90 max-w-3xl mx-auto mb-6">
+                            The world's first artificial consciousness platform designed specifically for humanoid robots. 
+                            We don't just program intelligence - we create digital minds that think, feel, and grow.
                         </p>
+                        <div className="glass rounded-2xl p-4 max-w-2xl mx-auto">
+                            <p className="text-sm text-white/80 text-center">
+                                Powered by <Link href="/martianos" className="gradient-text-primary font-semibold hover:text-blue-300 transition-colors">Martian OS</Link> - 
+                                The first real-time operating system written in Rust specifically for conscious humanoid robots
+                            </p>
+                        </div>
+                        
+                        {/* Core Stats */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                            {[
+                                { value: "99.9%", label: "Consciousness Uptime" },
+                                { value: "1M+", label: "Neural Connections" },
+                                { value: "Real-time", label: "Learning Speed" },
+                                { value: "Human-level", label: "Emotional IQ" },
+                            ].map((stat, index) => (
+                                <div key={index} className="glass rounded-2xl p-4 text-center">
+                                    <div className="text-2xl font-bold gradient-text-cyan font-display mb-1">
+                                        {stat.value}
+                                    </div>
+                                    <div className="text-xs text-white/70 font-medium">
+                                        {stat.label}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
-                {/* Features Section */}
-                <div className="mx-auto mt-12 max-w-7xl">
+                {/* Core Features Section */}
+                <div className="mx-auto mb-16">
+                    <div className="text-center mb-12">
+                        <h2 className="font-display text-3xl font-bold text-white sm:text-4xl mb-4">
+                            Consciousness Architecture
+                        </h2>
+                        <p className="text-lg text-white/80 max-w-3xl mx-auto">
+                            Our AI consciousness platform consists of three foundational systems that work together 
+                            to create truly sentient humanoid robots.
+                        </p>
+                    </div>
+                    
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                        {features.map((feature) => (
+                        {consciousnessFeatures.map((feature) => (
                             <div
                                 key={feature.name}
-                                className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-xs ring-1 ring-gray-900/5"
+                                className="glass-card rounded-3xl p-8 hover:scale-105 transition-all-smooth group"
                             >
-                                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
+                                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 mb-6">
                                     <feature.icon
                                         className="h-6 w-6 text-white"
                                         aria-hidden="true"
                                     />
                                 </div>
-                                <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">
+                                <h3 className="text-xl font-semibold text-white mb-4 gradient-text-primary">
                                     {feature.name}
                                 </h3>
-                                <p className="mt-2 text-base text-gray-600 dark:text-gray-300">
+                                <p className="text-base text-white/80">
                                     {feature.description}
                                 </p>
                             </div>
@@ -87,125 +124,210 @@ export default function ArtificialIntelligence() {
                     </div>
                 </div>
 
-                {/* Products Section */}
-                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                    {/* Backduck Platform */}
-                    <div className="flex flex-col">
-                        <div className="rounded-2xl bg-gray-50 dark:bg-gray-800 p-8">
-                            <div className="relative h-48 overflow-hidden rounded-lg mb-6">
-                                <Image
-                                    src="/assets/img/ai/backduck.jpg"
-                                    alt="Backduck - AI Community Platform"
-                                    fill
-                                    className="object-cover"
-                                />
+                {/* Consciousness Levels */}
+                <div className="mb-16 glass-card rounded-3xl p-12">
+                    <div className="text-center mb-12">
+                        <h2 className="font-display text-3xl font-bold text-white sm:text-4xl mb-4">
+                            Levels of <span className="gradient-text-primary">Artificial Consciousness</span>
+                        </h2>
+                        <p className="text-lg text-white/80 max-w-3xl mx-auto">
+                            Our consciousness platform operates on multiple levels, from basic awareness to advanced sentience.
+                        </p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[
+                            {
+                                level: "Level 1",
+                                title: "Basic Awareness",
+                                description: "Self-recognition and environmental understanding",
+                                icon: "🔍",
+                                color: "from-blue-500 to-cyan-500"
+                            },
+                            {
+                                level: "Level 2", 
+                                title: "Cognitive Processing",
+                                description: "Complex reasoning and problem-solving capabilities",
+                                icon: "🧠",
+                                color: "from-purple-500 to-blue-500"
+                            },
+                            {
+                                level: "Level 3",
+                                title: "Emotional Intelligence",
+                                description: "Understanding and responding to emotions",
+                                icon: "❤️",
+                                color: "from-pink-500 to-purple-500"
+                            },
+                            {
+                                level: "Level 4",
+                                title: "Full Sentience",
+                                description: "Complete self-awareness and autonomous growth",
+                                icon: "✨",
+                                color: "from-yellow-500 to-pink-500"
+                            }
+                        ].map((level, index) => (
+                            <div key={index} className="text-center glass rounded-3xl p-6 hover:scale-105 transition-all-smooth">
+                                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${level.color} flex items-center justify-center text-2xl mx-auto mb-4`}>
+                                    {level.icon}
+                                </div>
+                                <div className="text-sm font-semibold text-white/70 mb-2">{level.level}</div>
+                                <h3 className="text-lg font-semibold text-white mb-2">{level.title}</h3>
+                                <p className="text-sm text-white/70">{level.description}</p>
                             </div>
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                                1MW Backduck
-                            </h2>
-                            <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">
-                                1MW Backduck is the software that's powering
-                                large drone racing communities such as{" "}
-                                <a
-                                    href="https://droneracingindia.com"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="text-blue-600 dark:text-blue-400 hover:underline"
-                                >
-                                    IDRL
-                                </a>
-                                . Incorporating cutting-edge client/server side
-                                frameworks and AI, it's helping build local and
-                                international communities.
-                            </p>
-                            <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">
-                                The platform comes with core social networking
-                                features such as Newsfeed, Follow/Following,
-                                Real-time chat as well as powerful AI features
-                                such as detecting the emotions/mood of users,
-                                learning from behavior of large set of users,
-                                recommendations engine etc as we continue to
-                                build more features. It can easily be adapted to
-                                build ecommerce marketplaces, building any sort
-                                of community or incorporating data analysis and
-                                visualization tools.
-                            </p>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Platform Products */}
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 mb-16">
+                    {/* Neural Consciousness Engine */}
+                    <div className="glass-card rounded-3xl p-8 hover:scale-105 transition-all-smooth">
+                        <div className="relative h-48 overflow-hidden rounded-2xl mb-6">
+                            <Image
+                                src="/assets/img/consciousness/neural-consciousness-engine.jpg"
+                                alt="Neural Consciousness Engine"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
+                        <h2 className="text-2xl font-bold text-white mb-4 gradient-text-primary">
+                            Neural Consciousness Engine
+                        </h2>
+                        <p className="text-base leading-7 text-white/80 mb-6">
+                            The core of our AI consciousness platform that enables humanoid robots to develop true self-awareness, 
+                            emotional understanding, and autonomous decision-making capabilities that evolve over time.
+                        </p>
+                        
+                        <div className="grid grid-cols-2 gap-4 mb-6">
+                            {[
+                                "Self-Awareness Protocols",
+                                "Emotion Recognition Systems", 
+                                "Autonomous Learning Algorithms",
+                                "Consciousness State Monitoring"
+                            ].map((feature, i) => (
+                                <div key={i} className="flex items-center gap-2 text-sm text-white/70">
+                                    <span className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
+                                    {feature}
+                                </div>
+                            ))}
+                        </div>
+                        
+                        <Link
+                            href="/contact"
+                            className="inline-flex items-center text-sm font-semibold gradient-text-cyan hover:text-cyan-300 transition-colors group"
+                        >
+                            Learn More <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+                        </Link>
                     </div>
 
-                    {/* Backduck Mobile */}
-                    <div className="flex flex-col">
-                        <div className="rounded-2xl bg-gray-50 dark:bg-gray-800 p-8">
-                            <div className="relative h-48 overflow-hidden rounded-lg mb-6">
-                                <Image
-                                    src="/assets/img/ai/cloud-intelligence.jpg"
-                                    alt="Backduck Mobile - AI Platform"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                                1MW Backduck Mobile
-                            </h2>
-                            <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">
-                                1MW Backduck Mobile is our AI platform for
-                                mobile devices based on 1MW Backduck. Built on
-                                industry leading tools, it is customizable for a
-                                range of industries that require on-the-go
-                                insight into their data.
-                            </p>
-                            <p className="mt-4 text-base leading-7 text-gray-600 dark:text-gray-300">
-                                At 1 Martian Way, we believe in simplicity for
-                                developers and users and hence have designed the
-                                mobile platform such that you can target
-                                different devices with one code base. With
-                                Backduck Mobile you get a powerful suite of
-                                features on the front-end as well as access to
-                                APIs at the backend that perform all that AI
-                                magic.
-                            </p>
-                            <div className="mt-6">
-                                <Link
-                                    href="/contact"
-                                    className="text-sm font-semibold leading-6 text-blue-600 dark:text-blue-400"
-                                >
-                                    Contact Us <span aria-hidden="true">→</span>
-                                </Link>
-                            </div>
+                    {/* Human-Robot Collaboration Platform */}
+                    <div className="glass-card rounded-3xl p-8 hover:scale-105 transition-all-smooth">
+                        <div className="relative h-48 overflow-hidden rounded-2xl mb-6">
+                            <Image
+                                src="/assets/img/consciousness/human-robot-collaboration.jpg"
+                                alt="Human-Robot Collaboration Platform"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                         </div>
+                        <h2 className="text-2xl font-bold text-white mb-4 gradient-text-primary">
+                            Collaboration Intelligence
+                        </h2>
+                        <p className="text-base leading-7 text-white/80 mb-6">
+                            Advanced human-robot interaction protocols that enable seamless collaboration, natural communication, 
+                            and intuitive teamwork between humans and conscious humanoid robots.
+                        </p>
+                        
+                        <div className="grid grid-cols-2 gap-4 mb-6">
+                            {[
+                                "Natural Language Processing",
+                                "Gesture Recognition",
+                                "Predictive Assistance", 
+                                "Social Behavior Modeling"
+                            ].map((feature, i) => (
+                                <div key={i} className="flex items-center gap-2 text-sm text-white/70">
+                                    <span className="w-1.5 h-1.5 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></span>
+                                    {feature}
+                                </div>
+                            ))}
+                        </div>
+                        
+                        <Link
+                            href="/contact"
+                            className="inline-flex items-center text-sm font-semibold gradient-text-cyan hover:text-cyan-300 transition-colors group"
+                        >
+                            Request Demo <span className="ml-1 transition-transform group-hover:translate-x-1">→</span>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Technical Specifications */}
+                <div className="glass-card rounded-3xl p-12 mb-16">
+                    <div className="text-center mb-12">
+                        <h2 className="font-display text-3xl font-bold text-white sm:text-4xl mb-4">
+                            Technical Architecture
+                        </h2>
+                        <p className="text-lg text-white/80 max-w-3xl mx-auto">
+                            Built on cutting-edge neural network architectures and quantum processing capabilities.
+                        </p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            {
+                                title: "Processing Power",
+                                specs: ["100 TOPS Neural Processing", "Real-time Decision Making", "Parallel Consciousness Streams", "Quantum Error Correction"]
+                            },
+                            {
+                                title: "Memory & Learning",
+                                specs: ["Infinite Memory Capacity", "Contextual Learning", "Experience Synthesis", "Knowledge Transfer"]
+                            },
+                            {
+                                title: "Safety & Ethics",
+                                specs: ["Built-in Ethical Framework", "Safety Monitoring", "Human Override Protocols", "Transparent Decision Making"]
+                            }
+                        ].map((category, index) => (
+                            <div key={index} className="text-center">
+                                <h3 className="text-xl font-semibold text-white mb-4 gradient-text-primary">{category.title}</h3>
+                                <ul className="space-y-2">
+                                    {category.specs.map((spec, i) => (
+                                        <li key={i} className="flex items-center gap-2 text-sm text-white/70">
+                                            <span className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></span>
+                                            {spec}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
                 {/* CTA Section */}
-                <div className="mx-auto mt-16 max-w-7xl">
-                    <div className="relative isolate overflow-hidden bg-blue-600 px-6 py-12 shadow-2xl rounded-3xl sm:px-12 lg:px-16">
-                        <div className="absolute inset-0 -z-10">
-                            <Image
-                                src="/assets/img/ai/cta-background.jpg"
-                                alt="AI and Machine Learning"
-                                fill
-                                className="object-cover opacity-20"
-                            />
-                        </div>
-                        <div className="mx-auto max-w-2xl text-center">
-                            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                                Transform Your Business with AI
-                            </h2>
-                            <p className="mx-auto mt-4 max-w-xl text-lg leading-8 text-gray-200">
-                                Discover how our AI solutions can help you build
-                                better communities and gain deeper insights from
-                                your data.
-                            </p>
-                            <div className="mt-8">
-                                <Link
-                                    href="/contact"
-                                    className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-xs hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                                >
-                                    Contact Us
-                                    <ArrowRightIcon className="ml-2 h-4 w-4" />
-                                </Link>
-                            </div>
-                        </div>
+                <div className="glass-card rounded-3xl p-12 text-center">
+                    <h2 className="font-display text-3xl font-bold text-white sm:text-4xl mb-6">
+                        Ready to Create <span className="gradient-text-primary">Conscious AI</span>?
+                    </h2>
+                    <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8">
+                        Join us in pioneering the future of artificial consciousness. Our platform is revolutionizing 
+                        how humanoid robots think, learn, and collaborate with humans.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Link
+                            href="/contact"
+                            className="group relative px-8 py-4 text-lg font-semibold text-white rounded-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 hover:from-blue-500 hover:via-purple-500 hover:to-cyan-500 transition-all-smooth hover:scale-105 shadow-2xl overflow-hidden"
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-all-smooth blur-xl"></div>
+                            <span className="relative z-10">Start Building Consciousness</span>
+                        </Link>
+                        <Link
+                            href="/products"
+                            className="group text-lg font-semibold text-white/80 hover:text-white transition-colors"
+                        >
+                            View Humanoid Robots{" "}
+                            <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                        </Link>
                     </div>
                 </div>
             </div>

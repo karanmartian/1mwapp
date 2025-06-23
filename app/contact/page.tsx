@@ -62,7 +62,7 @@ export default function Contact() {
                     </h1>
                     <p className="mt-4 text-lg leading-8 text-white/80">
                         We'd love to hear from you. Our team is ready to assist
-                        with your inquiries about our advanced drone and AI
+                        with your inquiries about our advanced humanoids, Martian OS and AI. 
                         solutions.
                     </p>
                 </div>

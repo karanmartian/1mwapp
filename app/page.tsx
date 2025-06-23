@@ -67,6 +67,8 @@ export default function Home() {
                                 <span className="text-cyan-400 font-semibold"> sentient humanoid robots</span> with 
                                 <span className="text-purple-400 font-semibold"> true AI consciousness</span>. 
                                 Our research focuses on creating robots that think, learn, and collaborate naturally with humans.
+                                We also pioneer <a href="https://droneracingindia.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 font-semibold hover:text-orange-300 transition-colors">autonomous drone racing through IDRL</a>, 
+                                applying our AI breakthroughs to high-speed competitive robotics.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
                                 <div className="flex items-center gap-2 text-cyan-300">
@@ -77,9 +79,9 @@ export default function Home() {
                                     <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
                                     Advanced prototyping
                                 </div>
-                                <div className="flex items-center gap-2 text-blue-300">
-                                    <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                                    Breakthrough innovation
+                                <div className="flex items-center gap-2 text-orange-300">
+                                    <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
+                                    Autonomous racing tech
                                 </div>
                             </div>
                         </div>
@@ -141,88 +143,7 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* IDRL - Drone Racing India Spotlight */}
-            <div className="relative py-12 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-900/30 via-red-900/20 to-slate-900/40"></div>
-                <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
-                    <div className="glass-card rounded-3xl p-8 lg:p-12">
-                        <div className="flex flex-col lg:flex-row items-center gap-8">
-                            <div className="flex-1 text-center lg:text-left">
-                                <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
-                                    <span className="text-4xl">🏁</span>
-                                    <div>
-                                        <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
-                                            <span className="gradient-text-orange">IDRL</span> - Drone Racing India
-                                        </h2>
-                                        <p className="text-orange-300 font-medium">Pioneering Autonomous Racing Technology</p>
-                                    </div>
-                                </div>
-                                <p className="text-lg text-white/90 mb-6 leading-relaxed">
-                                    From our expertise in AI consciousness and robotics, we've created <strong>IDRL</strong> - 
-                                    India's premier drone racing platform. Combining high-speed autonomous flight with 
-                                    real-time AI decision making, IDRL represents the future of competitive robotics.
-                                </p>
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                                    {[
-                                        { value: "300+", label: "Racing Events" },
-                                        { value: "50ms", label: "AI Response" },
-                                        { value: "15+", label: "Racing Teams" },
-                                        { value: "200km/h", label: "Max Speed" },
-                                    ].map((stat, index) => (
-                                        <div key={index} className="text-center">
-                                            <div className="text-xl font-bold gradient-text-orange font-display mb-1">
-                                                {stat.value}
-                                            </div>
-                                            <div className="text-xs text-white/70">
-                                                {stat.label}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                                    <a
-                                        href="https://droneracingindia.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group relative px-6 py-3 text-base font-semibold text-white rounded-xl bg-gradient-to-r from-orange-600 via-red-600 to-orange-600 hover:from-orange-500 hover:via-red-500 hover:to-orange-500 transition-all-smooth hover:scale-105 shadow-xl"
-                                    >
-                                        <span className="flex items-center gap-2">
-                                            🏁 Visit IDRL
-                                            <span className="transition-transform group-hover:translate-x-1">→</span>
-                                        </span>
-                                    </a>
-                                    <Link
-                                        href="/brands"
-                                        className="group px-6 py-3 text-base font-semibold text-white/90 hover:text-white glass rounded-xl hover:glass-card transition-all-smooth"
-                                    >
-                                        <span className="flex items-center gap-2">
-                                            🔧 Our Brands
-                                            <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-                                        </span>
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className="flex-shrink-0">
-                                <div className="glass rounded-2xl p-6 text-center max-w-sm">
-                                    <div className="text-6xl mb-4">🚁</div>
-                                    <h3 className="text-lg font-bold text-white mb-2">Autonomous Racing</h3>
-                                    <p className="text-sm text-white/80 mb-4">
-                                        AI-powered drones compete at speeds up to 200 km/h with millisecond decision-making capabilities.
-                                    </p>
-                                    <div className="grid grid-cols-2 gap-2 text-xs">
-                                        <div className="glass rounded-lg p-2">
-                                            <div className="text-orange-300 font-semibold">Real-time AI</div>
-                                        </div>
-                                        <div className="glass rounded-lg p-2">
-                                            <div className="text-red-300 font-semibold">High-speed Racing</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             {/* Research & Technology Section */}
             <div className="relative py-8 overflow-hidden">
@@ -445,6 +366,89 @@ export default function Home() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* IDRL - Drone Racing India Spotlight */}
+            <div className="relative py-12 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-900/30 via-red-900/20 to-slate-900/40"></div>
+                <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
+                    <div className="glass-card rounded-3xl p-8 lg:p-12">
+                        <div className="flex flex-col lg:flex-row items-center gap-8">
+                            <div className="flex-1 text-center lg:text-left">
+                                <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
+                                    <span className="text-4xl">🏁</span>
+                                    <div>
+                                        <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+                                            <span className="gradient-text-orange">IDRL</span> - Drone Racing India
+                                        </h2>
+                                        <p className="text-orange-300 font-medium">Pioneering Autonomous Racing Technology</p>
+                                    </div>
+                                </div>
+                                <p className="text-lg text-white/90 mb-6 leading-relaxed">
+                                    From our expertise in AI consciousness and robotics, we've created <strong>IDRL</strong> - 
+                                    India's premier drone racing platform. Combining high-speed autonomous flight with 
+                                    real-time AI decision making, IDRL represents the future of competitive robotics.
+                                </p>
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                                    {[
+                                        { value: "300+", label: "Racing Events" },
+                                        { value: "50ms", label: "AI Response" },
+                                        { value: "15+", label: "Racing Teams" },
+                                        { value: "200km/h", label: "Max Speed" },
+                                    ].map((stat, index) => (
+                                        <div key={index} className="text-center">
+                                            <div className="text-xl font-bold gradient-text-orange font-display mb-1">
+                                                {stat.value}
+                                            </div>
+                                            <div className="text-xs text-white/70">
+                                                {stat.label}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                                    <a
+                                        href="https://droneracingindia.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group relative px-6 py-3 text-base font-semibold text-white rounded-xl bg-gradient-to-r from-orange-600 via-red-600 to-orange-600 hover:from-orange-500 hover:via-red-500 hover:to-orange-500 transition-all-smooth hover:scale-105 shadow-xl"
+                                    >
+                                        <span className="flex items-center gap-2">
+                                            🏁 Visit IDRL
+                                            <span className="transition-transform group-hover:translate-x-1">→</span>
+                                        </span>
+                                    </a>
+                                    <Link
+                                        href="/brands"
+                                        className="group px-6 py-3 text-base font-semibold text-white/90 hover:text-white glass rounded-xl hover:glass-card transition-all-smooth"
+                                    >
+                                        <span className="flex items-center gap-2">
+                                            🔧 Our Divisions
+                                            <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+                                        </span>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="flex-shrink-0">
+                                <div className="glass rounded-2xl p-6 text-center max-w-sm">
+                                    <div className="text-6xl mb-4">🚁</div>
+                                    <h3 className="text-lg font-bold text-white mb-2">Autonomous Racing</h3>
+                                    <p className="text-sm text-white/80 mb-4">
+                                        AI-powered drones compete at speeds up to 200 km/h with millisecond decision-making capabilities.
+                                    </p>
+                                    <div className="grid grid-cols-2 gap-2 text-xs">
+                                        <div className="glass rounded-lg p-2">
+                                            <div className="text-orange-300 font-semibold">Real-time AI</div>
+                                        </div>
+                                        <div className="glass rounded-lg p-2">
+                                            <div className="text-red-300 font-semibold">High-speed Racing</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -164,16 +164,17 @@ export default function Header() {
                 <div className={`lg:hidden fixed inset-0 z-50 transition-opacity duration-300 ease-in-out ${
                     mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
                 }`}>
-                    {/* Backdrop */}
+                    {/* Backdrop/Overlay */}
                     <div
                         className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
                         onClick={() => setMobileMenuOpen(false)}
                     />
                     
-                    {/* Slide-in menu panel */}
-                    <div className={`fixed top-0 left-0 z-50 w-80 max-w-[85vw] overflow-y-auto border-r border-white/10 transform transition-transform duration-300 ease-in-out ${
-                        mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-                    }`}
+                    {/* Sidebar panel */}
+                    <div
+                        className={`fixed top-0 left-0 z-50 w-80 max-w-[85vw] overflow-y-auto border-r border-white/10 transform transition-transform duration-300 ease-in-out ${
+                            mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                        }`}
                         style={{
                             height: '100vh',
                             minHeight: '100vh',

@@ -8,30 +8,35 @@ export default function Home() {
             <div className="relative isolate flex items-center justify-center overflow-hidden py-16 sm:py-20">
                 {/* Clean Background */}
                 <div className="absolute inset-0 -z-20">
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-950 via-purple-900 to-slate-950"></div>
                     <div className="absolute inset-0">
                         <Image
-                            src="/assets/img/hero/humanoid-lab-background.jpg"
-                            alt="Futuristic humanoid robotics laboratory"
+                            src="/assets/img/hero/robots-mars.jpg"
+                            alt="Galaxy with humans and robots working together in space"
                             fill
-                            className="object-cover opacity-30"
+                            className="object-cover opacity-40"
                             priority
                         />
                     </div>
                     <div className="absolute inset-0 grid-bg opacity-20"></div>
                 </div>
 
-                {/* Minimal Floating Elements */}
+                {/* Galaxy Starfield Elements */}
                 <div className="absolute inset-0 -z-10">
-                    {[...Array(15)].map((_, i) => (
+                    {[...Array(25)].map((_, i) => (
                         <div
                             key={i}
-                            className="absolute w-1 h-1 bg-white/20 rounded-full animate-float"
+                            className={`absolute rounded-full animate-float ${
+                                i % 4 === 0 ? 'w-1.5 h-1.5 bg-blue-300/30' :
+                                i % 4 === 1 ? 'w-1 h-1 bg-purple-300/40' :
+                                i % 4 === 2 ? 'w-0.5 h-0.5 bg-cyan-300/50' :
+                                'w-0.5 h-0.5 bg-white/30'
+                            }`}
                             style={{
                                 left: `${Math.random() * 100}%`,
                                 top: `${Math.random() * 100}%`,
-                                animationDelay: `${Math.random() * 8}s`,
-                                animationDuration: `${8 + Math.random() * 8}s`,
+                                animationDelay: `${Math.random() * 12}s`,
+                                animationDuration: `${6 + Math.random() * 12}s`,
                             }}
                         />
                     ))}

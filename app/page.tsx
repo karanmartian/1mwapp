@@ -14,11 +14,11 @@ export default function Home() {
                             src="/assets/img/hero/robots-mars.jpg"
                             alt="Galaxy with humans and robots working together in space"
                             fill
-                            className="object-cover opacity-40"
+                            className="object-cover opacity-5"
                             priority
                         />
                     </div>
-                    <div className="absolute inset-0 grid-bg opacity-20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-transparent to-slate-950/40"></div>
                 </div>
 
                 {/* Galaxy Starfield Elements */}

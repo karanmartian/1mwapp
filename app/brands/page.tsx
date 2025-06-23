@@ -49,7 +49,7 @@ export default function Brands() {
                                             <h2 className="font-display text-3xl font-bold text-white sm:text-4xl mb-2">
                                                 <span className="gradient-text-orange">IDRL</span>
                                             </h2>
-                                            <p className="text-xl text-orange-300 font-semibold">Drone Racing India</p>
+                                            <p className="text-xl text-orange-300 font-semibold">Indian Drone Racing League</p>
                                             <p className="text-orange-200/80 text-sm">Featured Brand</p>
                                         </div>
                                     </div>

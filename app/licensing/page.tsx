@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 
 export default function Licensing() {
     return (
-        <div className="bg-white dark:bg-gray-900">
+        <>
             <div className="mx-auto max-w-7xl px-6 py-8 sm:py-12 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                                                <h1 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-2xl">
+                    <h1 className="text-xl font-bold tracking-tight text-white sm:text-2xl">
                         Licensing & Partnerships
                     </h1>
-                    <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
+                    <p className="mt-4 text-lg leading-8 text-white/80">
                         Explore opportunities to leverage our cutting-edge
                         technology through various licensing and partnership
                         options.
@@ -132,6 +132,6 @@ export default function Licensing() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

@@ -10,12 +10,8 @@ export const metadata: Metadata = {
 
 export default function Brands() {
     return (
-        <div className="relative min-h-screen">
-            {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-            <div className="absolute inset-0 grid-bg opacity-20"></div>
-            
-            <div className="relative mx-auto max-w-7xl px-6 py-6 sm:py-8 lg:px-8">
+        <>
+            <div className="mx-auto max-w-7xl px-6 py-6 sm:py-8 lg:px-8">
                 <div className="mx-auto max-w-4xl text-center mb-16">
                     <h1 className="font-display text-2xl font-bold tracking-tight text-white sm:text-4xl mb-6">
                         Our <span className="gradient-text-primary">Humanoid</span> Divisions
@@ -212,6 +208,6 @@ export default function Brands() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }

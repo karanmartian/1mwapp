@@ -47,7 +47,7 @@ export default function Home() {
 
 
                         {/* Main Heading */}
-                        <h1 className="font-display text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">
+                        <h1 className="font-display text-xl font-bold tracking-tight text-white sm:text-3xl lg:text-4xl mb-6 leading-tight">
                             Pioneering{" "}
                             <span className="gradient-text-primary">
                                 Conscious AI

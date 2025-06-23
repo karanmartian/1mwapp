@@ -77,7 +77,7 @@ export default function Header() {
                     <div className="flex lg:flex-1">
                         <Link
                             href="/"
-                            className="-m-1.5 p-1.5 flex items-center gap-3 group transition-all-smooth"
+                            className="-m-1.5 p-1.5 flex items-center gap-1 group transition-all-smooth"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <div className="relative">
@@ -179,7 +179,7 @@ export default function Header() {
                             <div className="flex items-center justify-between mb-8">
                                 <Link
                                     href="/"
-                                    className="flex items-center gap-3 group"
+                                    className="flex items-center gap-1 group"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     <Image

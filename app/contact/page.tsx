@@ -57,7 +57,7 @@ export default function Contact() {
         <div className="bg-white dark:bg-gray-900">
             <div className="mx-auto max-w-7xl px-6 py-8 sm:py-12 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                                                <h1 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-2xl">
                         Get in Touch
                     </h1>
                     <p className="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">

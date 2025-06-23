@@ -36,7 +36,7 @@ export default function MartianOS() {
                         />
                     </div>
                     <div className="mx-auto max-w-4xl text-center">
-                        <h1 className="font-display text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+                        <h1 className="font-display text-2xl font-bold tracking-tight text-white sm:text-4xl mb-6">
                             <span className="gradient-text-primary">Martian OS</span>
                         </h1>
                         <p className="text-xl leading-8 text-white/90 max-w-3xl mx-auto mb-8">

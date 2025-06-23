@@ -62,7 +62,7 @@ export default function Products() {
             <div className="relative mx-auto max-w-7xl px-6 py-6 sm:py-8 lg:px-8">
                 {/* Hero Section */}
                 <div className="mx-auto max-w-4xl text-center mb-16">
-                    <h1 className="font-display text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+                    <h1 className="font-display text-2xl font-bold tracking-tight text-white sm:text-4xl mb-6">
                         Advanced{" "}
                         <span className="gradient-text-primary">Humanoid Robots</span>
                     </h1>

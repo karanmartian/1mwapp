@@ -17,7 +17,7 @@ export default function Brands() {
             
             <div className="relative mx-auto max-w-7xl px-6 py-6 sm:py-8 lg:px-8">
                 <div className="mx-auto max-w-4xl text-center mb-16">
-                    <h1 className="font-display text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+                    <h1 className="font-display text-2xl font-bold tracking-tight text-white sm:text-4xl mb-6">
                         Our <span className="gradient-text-primary">Humanoid</span> Divisions
                     </h1>
                     <p className="text-lg leading-8 text-white/80 max-w-2xl mx-auto">

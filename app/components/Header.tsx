@@ -161,20 +161,29 @@ export default function Header() {
                 </nav>
 
                 {/* Mobile menu */}
-                <div className={`lg:hidden fixed inset-0 z-40 transition-opacity duration-300 ease-in-out ${
+                <div className={`lg:hidden fixed inset-0 z-50 transition-opacity duration-300 ease-in-out ${
                     mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
                 }`}>
                     {/* Backdrop */}
                     <div
-                        className="fixed inset-0 bg-black/60 backdrop-blur-sm"
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
                         onClick={() => setMobileMenuOpen(false)}
                     />
                     
                     {/* Slide-in menu panel */}
-                    <div className={`fixed inset-y-0 left-0 z-50 w-80 max-w-[85vw] overflow-y-auto glass-dark border-r border-white/10 transform transition-transform duration-300 ease-in-out ${
+                    <div className={`fixed top-0 left-0 z-50 w-80 max-w-[85vw] overflow-y-auto border-r border-white/10 transform transition-transform duration-300 ease-in-out ${
                         mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-                    }`}>
-                        <div className="px-6 py-6">
+                    }`}
+                        style={{
+                            height: '100vh',
+                            minHeight: '100vh',
+                            maxHeight: '100vh',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            background: 'rgba(24, 24, 32, 0.95)'
+                        }}
+                    >
+                        <div className="px-6 py-6 flex flex-col h-full">
                             {/* Header with logo and close button */}
                             <div className="flex items-center justify-between mb-8">
                                 <Link
@@ -207,7 +216,7 @@ export default function Header() {
                             </div>
 
                             {/* Navigation links */}
-                            <div className="space-y-2">
+                            <div className="space-y-2 flex-1">
                                 {navigation.map((item, index) => (
                                     <div key={item.name} 
                                          className={`transform transition-all duration-300 ease-out ${
@@ -218,7 +227,7 @@ export default function Header() {
                                          style={{ transitionDelay: `${index * 50}ms` }}>
                                         <Link
                                             href={item.href}
-                                            className={`flex items-center px-4 py-3 text-base font-semibold rounded-xl transition-all-smooth hover:scale-[1.02] ${
+                                            className={`flex items-center px-4 py-3 text-base font-semibold rounded-xl transition-all-smooth hover:scale-[1.02] text-left w-full ${
                                                 pathname === item.href
                                                     ? "glass text-white shadow-lg glow"
                                                     : "text-white/80 hover:text-white hover:glass"

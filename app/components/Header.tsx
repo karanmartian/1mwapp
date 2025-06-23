@@ -161,123 +161,114 @@ export default function Header() {
                 </nav>
 
                 {/* Mobile menu */}
-                <div className={`lg:hidden fixed inset-0 z-50 transition-opacity duration-300 ease-in-out ${
-                    mobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                }`}>
-                    {/* Backdrop/Overlay */}
+                {mobileMenuOpen && (
+                  <div className="lg:hidden fixed inset-0 z-50">
+                    {/* Overlay */}
                     <div
-                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
-                        onClick={() => setMobileMenuOpen(false)}
+                      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+                      onClick={() => setMobileMenuOpen(false)}
                     />
-                    
-                    {/* Sidebar panel */}
+                    {/* Sidebar */}
                     <div
-                        className={`fixed top-0 left-0 z-50 w-80 max-w-[85vw] overflow-y-auto border-r border-white/10 transform transition-transform duration-300 ease-in-out ${
-                            mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-                        }`}
-                        style={{
-                            height: '100vh',
-                            minHeight: '100vh',
-                            maxHeight: '100vh',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            background: 'rgba(24, 24, 32, 0.95)'
-                        }}
+                      className="fixed top-0 left-0 z-[100] w-80 max-w-[85vw] h-full overflow-y-auto border-r border-white/10 transition-transform duration-300 ease-in-out"
+                      style={{
+                        background: 'rgba(24, 24, 32, 0.95)',
+                        display: 'flex',
+                        flexDirection: 'column',
+                      }}
                     >
-                        <div className="px-6 py-6 flex flex-col h-full">
-                            {/* Header with logo and close button */}
-                            <div className="flex items-center justify-between mb-8">
-                                <Link
-                                    href="/"
-                                    className="flex items-center gap-1 group"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    <Image
-                                        className="h-8 w-auto"
-                                        src="/assets/img/1mw-logo.svg"
-                                        alt="1MW"
-                                        width={32}
-                                        height={32}
-                                    />
-                                    <span className="text-lg font-bold gradient-text-primary font-display">
-                                        1 Martian Way
-                                    </span>
-                                </Link>
+                      <div className="px-6 py-6 flex flex-col h-full">
+                        {/* Header with logo and close button */}
+                        <div className="flex items-center justify-between mb-8">
+                          <Link
+                            href="/"
+                            className="flex items-center gap-1 group"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            <Image
+                              className="h-8 w-auto"
+                              src="/assets/img/1mw-logo.svg"
+                              alt="1MW"
+                              width={32}
+                              height={32}
+                            />
+                            <span className="text-lg font-bold gradient-text-primary font-display">
+                              1 Martian Way
+                            </span>
+                          </Link>
+                          <button
+                            type="button"
+                            className="glass rounded-xl p-3 text-white/90 hover:text-white transition-all-smooth hover:scale-105"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            <span className="sr-only">Close menu</span>
+                            <Cross1Icon className="h-6 w-6" aria-hidden="true" />
+                          </button>
+                        </div>
+
+                        {/* Navigation links */}
+                        <div className="space-y-2 flex-1">
+                            {navigation.map((item, index) => (
+                                <div key={item.name} 
+                                     className={`transform transition-all duration-300 ease-out ${
+                                         mobileMenuOpen 
+                                             ? 'translate-x-0 opacity-100' 
+                                             : 'translate-x-4 opacity-0'
+                                     }`}
+                                     style={{ transitionDelay: `${index * 50}ms` }}>
+                                    <Link
+                                        href={item.href}
+                                        className={`flex items-center px-4 py-3 text-base font-semibold rounded-xl transition-all-smooth hover:scale-[1.02] text-left w-full ${
+                                            pathname === item.href
+                                                ? "glass text-white shadow-lg glow"
+                                                : "text-white/80 hover:text-white hover:glass"
+                                        }`}
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        <span>{item.name}</span>
+                                        {pathname === item.href && (
+                                            <div className="ml-auto w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
+                                        )}
+                                    </Link>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Footer section with theme toggle and contact */}
+                        <div className={`mt-8 pt-6 border-t border-white/10 space-y-4 transform transition-all duration-300 ease-out ${
+                            mobileMenuOpen 
+                                ? 'translate-x-0 opacity-100' 
+                                : 'translate-x-4 opacity-0'
+                        }`} style={{ transitionDelay: `${navigation.length * 50}ms` }}>
+                            <div className="flex items-center justify-between">
+                                <span className="text-sm text-white/70 font-medium">
+                                    Theme
+                                </span>
                                 <button
-                                    type="button"
-                                    className="glass rounded-xl p-3 text-white/90 hover:text-white transition-all-smooth hover:scale-105"
-                                    onClick={() => setMobileMenuOpen(false)}
+                                    onClick={toggleTheme}
+                                    className="glass rounded-xl p-3 text-white/90 hover:text-white transition-all-smooth hover:scale-105 glow-hover"
+                                    aria-label="Toggle theme"
                                 >
-                                    <span className="sr-only">Close menu</span>
-                                    <Cross1Icon
-                                        className="h-6 w-6"
-                                        aria-hidden="true"
-                                    />
+                                    {mounted && theme === "dark" ? (
+                                        <SunIcon className="h-5 w-5" />
+                                    ) : (
+                                        <MoonIcon className="h-5 w-5" />
+                                    )}
                                 </button>
                             </div>
-
-                            {/* Navigation links */}
-                            <div className="space-y-2 flex-1">
-                                {navigation.map((item, index) => (
-                                    <div key={item.name} 
-                                         className={`transform transition-all duration-300 ease-out ${
-                                             mobileMenuOpen 
-                                                 ? 'translate-x-0 opacity-100' 
-                                                 : 'translate-x-4 opacity-0'
-                                         }`}
-                                         style={{ transitionDelay: `${index * 50}ms` }}>
-                                        <Link
-                                            href={item.href}
-                                            className={`flex items-center px-4 py-3 text-base font-semibold rounded-xl transition-all-smooth hover:scale-[1.02] text-left w-full ${
-                                                pathname === item.href
-                                                    ? "glass text-white shadow-lg glow"
-                                                    : "text-white/80 hover:text-white hover:glass"
-                                            }`}
-                                            onClick={() => setMobileMenuOpen(false)}
-                                        >
-                                            <span>{item.name}</span>
-                                            {pathname === item.href && (
-                                                <div className="ml-auto w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></div>
-                                            )}
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* Footer section with theme toggle and contact */}
-                            <div className={`mt-8 pt-6 border-t border-white/10 space-y-4 transform transition-all duration-300 ease-out ${
-                                mobileMenuOpen 
-                                    ? 'translate-x-0 opacity-100' 
-                                    : 'translate-x-4 opacity-0'
-                            }`} style={{ transitionDelay: `${navigation.length * 50}ms` }}>
-                                <div className="flex items-center justify-between">
-                                    <span className="text-sm text-white/70 font-medium">
-                                        Theme
-                                    </span>
-                                    <button
-                                        onClick={toggleTheme}
-                                        className="glass rounded-xl p-3 text-white/90 hover:text-white transition-all-smooth hover:scale-105 glow-hover"
-                                        aria-label="Toggle theme"
-                                    >
-                                        {mounted && theme === "dark" ? (
-                                            <SunIcon className="h-5 w-5" />
-                                        ) : (
-                                            <MoonIcon className="h-5 w-5" />
-                                        )}
-                                    </button>
-                                </div>
-                                <Link
-                                    href="/contact"
-                                    className="block w-full px-6 py-3 text-center text-sm font-semibold text-white rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all-smooth hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden group"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-all-smooth blur-xl"></div>
-                                    <span className="relative z-10">Contact Us</span>
-                                </Link>
-                            </div>
+                            <Link
+                                href="/contact"
+                                className="block w-full px-6 py-3 text-center text-sm font-semibold text-white rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 transition-all-smooth hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden group"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-all-smooth blur-xl"></div>
+                                <span className="relative z-10">Contact Us</span>
+                            </Link>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
+                )}
             </header>
         </>
     );

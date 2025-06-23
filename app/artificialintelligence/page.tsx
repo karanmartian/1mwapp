@@ -17,19 +17,19 @@ const consciousnessFeatures = [
     {
         name: "Neural Consciousness Engine",
         description:
-            "Our proprietary consciousness platform that enables true self-awareness, emotional intelligence, and autonomous reasoning in humanoid robots.",
+            "Built on Martian OS, our consciousness engine provides true self-awareness through multi-layered neural architectures running in real-time with <1μs latency for critical consciousness loops.",
         icon: Component1Icon,
     },
     {
-        name: "Adaptive Learning Framework",
+        name: "Adaptive Learning Framework", 
         description:
-            "Continuous learning algorithms that allow robots to evolve, adapt, and improve their capabilities through real-world interactions.",
+            "Rust-powered continuous learning with zero-copy memory management, enabling robots to evolve and adapt without system interruptions or garbage collection pauses.",
         icon: CodeIcon,
     },
     {
         name: "Human-Robot Interface",
         description:
-            "Natural language processing and emotional recognition systems that enable seamless communication and collaboration with humans.",
+            "Advanced natural language processing and empathetic AI running natively on Martian OS, with dedicated neural compute units for real-time emotional understanding.",
         icon: RocketIcon,
     },
 ];
@@ -46,10 +46,10 @@ export default function ArtificialIntelligence() {
                 <div className="relative isolate overflow-hidden glass-card rounded-3xl px-6 py-24 shadow-2xl sm:px-12 lg:px-16 mb-16">
                     <div className="absolute inset-0 -z-10">
                         <Image
-                            src="/assets/img/consciousness/consciousness-levels.jpg"
+                            src="/assets/img/humanoids/martian-x1-assistant.jpg"
                             alt="AI Consciousness Architecture"
                             fill
-                            className="object-cover opacity-30"
+                            className="object-cover opacity-25"
                             priority
                         />
                     </div>
@@ -61,11 +61,25 @@ export default function ArtificialIntelligence() {
                             The world's first artificial consciousness platform designed specifically for humanoid robots. 
                             We don't just program intelligence - we create digital minds that think, feel, and grow.
                         </p>
-                        <div className="glass rounded-2xl p-4 max-w-2xl mx-auto">
-                            <p className="text-sm text-white/80 text-center">
-                                Powered by <Link href="/martianos" className="gradient-text-primary font-semibold hover:text-blue-300 transition-colors">Martian OS</Link> - 
-                                The first real-time operating system written in Rust specifically for conscious humanoid robots
+                        <div className="glass rounded-2xl p-6 max-w-3xl mx-auto">
+                            <p className="text-sm text-white/80 text-center mb-4">
+                                <strong className="gradient-text-primary">Powered by Martian OS</strong> - 
+                                The world's first real-time operating system written in Rust specifically for conscious humanoid robots
                             </p>
+                            <div className="flex justify-center gap-4 text-xs text-white/70">
+                                <span>🦀 <strong>Rust-Native</strong> kernel</span>
+                                <span>⚡ <strong>&lt;1μs</strong> latency</span>
+                                <span>🧠 <strong>Consciousness-First</strong> design</span>
+                                <span>🔒 <strong>Memory-Safe</strong> by default</span>
+                            </div>
+                            <div className="text-center mt-4">
+                                <Link 
+                                    href="/martianos" 
+                                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg border border-blue-500/30 text-blue-300 hover:from-blue-500/30 hover:to-purple-500/30 transition-all-smooth text-sm"
+                                >
+                                    Explore Martian OS →
+                                </Link>
+                            </div>
                         </div>
                         
                         {/* Core Stats */}

@@ -17,19 +17,19 @@ const spatialFeatures = [
     {
         name: "3D Environment Mapping",
         description:
-            "Advanced spatial mapping capabilities that allow humanoid robots to build detailed 3D models of their environment in real-time.",
+            "Real-time spatial mapping on Martian OS with sub-microsecond latency, enabling humanoid robots to build detailed 3D models while maintaining deterministic performance.",
         icon: CameraIcon,
     },
     {
-        name: "Autonomous Navigation",
+        name: "Autonomous Navigation", 
         description:
-            "Intelligent pathfinding and navigation systems that enable humanoid robots to move safely through complex spaces.",
+            "Rust-powered pathfinding algorithms with memory-safe navigation stacks, enabling safe movement through complex spaces without runtime overhead.",
         icon: DrawingPinIcon,
     },
     {
         name: "Spatial Reasoning",
         description:
-            "AI-powered spatial intelligence that helps robots understand object relationships and optimize their interactions with the environment.",
+            "Advanced spatial AI running on dedicated neural compute units within Martian OS, providing real-time object relationship understanding and interaction optimization.",
         icon: GlobeIcon,
     },
 ];
@@ -57,10 +57,30 @@ export default function Geospatial() {
                         <h1 className="font-display text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
                             Robot <span className="gradient-text-primary">Spatial Intelligence</span>
                         </h1>
-                        <p className="text-lg leading-8 text-white/90 max-w-3xl mx-auto">
+                        <p className="text-lg leading-8 text-white/90 max-w-3xl mx-auto mb-6">
                             Empowering humanoid robots with advanced spatial intelligence, environmental understanding, 
                             and autonomous navigation capabilities for seamless integration into human spaces.
                         </p>
+                        <div className="glass rounded-2xl p-6 max-w-3xl mx-auto">
+                            <p className="text-sm text-white/80 text-center mb-4">
+                                <strong className="gradient-text-primary">Powered by Martian OS</strong> - 
+                                Real-time spatial processing with deterministic performance guarantees
+                            </p>
+                            <div className="flex justify-center gap-4 text-xs text-white/70">
+                                <span>🗺️ <strong>Real-time</strong> mapping</span>
+                                <span>⚡ <strong>1000Hz</strong> control loops</span>
+                                <span>🧭 <strong>Sub-cm</strong> accuracy</span>
+                                <span>🔒 <strong>Memory-safe</strong> navigation</span>
+                            </div>
+                            <div className="text-center mt-4">
+                                <Link 
+                                    href="/martianos" 
+                                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg border border-blue-500/30 text-blue-300 hover:from-blue-500/30 hover:to-purple-500/30 transition-all-smooth text-sm"
+                                >
+                                    Explore Martian OS →
+                                </Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

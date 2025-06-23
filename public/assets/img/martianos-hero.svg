@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <!-- Mars landscape gradient -->
+    <linearGradient id="marsLandscape" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#CD853F;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#FF6347;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF4500;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Sky gradient -->
+    <linearGradient id="marsSky" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#0f3460;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#533a71;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- OS interface gradient -->
+    <linearGradient id="osInterface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#0080FF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#4040FF;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <!-- Hologram gradient -->
+    <linearGradient id="hologram" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FFFF;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#40FF40;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FF40FF;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <!-- Circuit pattern -->
+    <pattern id="circuitPattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="none"/>
+      <path d="M10,10 L40,10 M25,10 L25,40 M10,40 L40,40 M10,25 L25,25" 
+            stroke="url(#osInterface)" stroke-width="1" opacity="0.3"/>
+      <circle cx="10" cy="10" r="2" fill="url(#osInterface)" opacity="0.5"/>
+      <circle cx="40" cy="40" r="2" fill="url(#osInterface)" opacity="0.5"/>
+      <circle cx="25" cy="25" r="1.5" fill="url(#hologram)" opacity="0.6"/>
+    </pattern>
+    
+    <!-- Glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Hologram effect -->
+    <filter id="hologramEffect" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Mars sky background -->
+  <rect width="1200" height="400" fill="url(#marsSky)"/>
+  
+  <!-- Mars surface -->
+  <path d="M0 400 Q300 350 600 380 T1200 400 L1200 600 L0 600 Z" fill="url(#marsLandscape)"/>
+  
+  <!-- Circuit pattern overlay on landscape -->
+  <rect x="0" y="350" width="1200" height="250" fill="url(#circuitPattern)" opacity="0.4"/>
+  
+  <!-- Distant Mars mountains -->
+  <path d="M0 400 L200 320 L400 360 L600 300 L800 340 L1000 280 L1200 320 L1200 400 Z" 
+        fill="rgba(139, 69, 19, 0.6)"/>
+  
+  <!-- Main OS Interface Hologram - Central Terminal -->
+  <g transform="translate(600, 200)">
+    <!-- Main holographic screen -->
+    <rect x="-180" y="-80" width="360" height="200" rx="15" 
+          fill="url(#osInterface)" filter="url(#glow)" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Terminal content lines -->
+    <g opacity="0.9">
+      <rect x="-160" y="-60" width="120" height="3" fill="#00FFFF"/>
+      <rect x="-160" y="-50" width="200" height="2" fill="#40FF40"/>
+      <rect x="-160" y="-40" width="150" height="2" fill="#FF40FF"/>
+      <rect x="-160" y="-30" width="180" height="2" fill="#00FFFF"/>
+      
+      <!-- Cursor blinking -->
+      <rect x="-160" y="-20" width="8" height="3" fill="#40FF40">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+      
+      <!-- Data streams -->
+      <rect x="-160" y="10" width="320" height="2" fill="url(#hologram)" opacity="0.6">
+        <animate attributeName="width" values="0;320;0" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="-160" y="20" width="280" height="2" fill="url(#hologram)" opacity="0.5">
+        <animate attributeName="width" values="320;0;320" dur="5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    
+    <!-- Floating data panels -->
+    <g transform="translate(-250, -50)">
+      <rect x="0" y="0" width="80" height="60" rx="8" fill="url(#hologram)" filter="url(#hologramEffect)" opacity="0.7">
+        <animateTransform attributeName="transform" type="translate" values="0,0;5,2;0,0" dur="6s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Mini data visualization -->
+      <path d="M10 50 L20 30 L30 40 L40 20 L50 35 L60 15 L70 25" 
+            stroke="#00FFFF" stroke-width="2" fill="none" opacity="0.8"/>
+    </g>
+    
+    <g transform="translate(200, -30)">
+      <rect x="0" y="0" width="70" height="50" rx="6" fill="url(#osInterface)" filter="url(#hologramEffect)" opacity="0.6">
+        <animateTransform attributeName="transform" type="translate" values="0,0;-3,3;0,0" dur="8s" repeatCount="indefinite"/>
+      </rect>
+      <!-- System stats -->
+      <circle cx="15" cy="15" r="8" fill="none" stroke="#40FF40" stroke-width="2"/>
+      <circle cx="15" cy="15" r="6" fill="#40FF40" opacity="0.3"/>
+      <rect x="30" y="10" width="30" height="3" fill="#00FFFF"/>
+      <rect x="30" y="20" width="25" height="3" fill="#FF40FF"/>
+    </g>
+  </g>
+  
+  <!-- Side navigation panels -->
+  <g transform="translate(100, 150)">
+    <rect x="0" y="0" width="60" height="300" rx="10" fill="url(#osInterface)" opacity="0.6" filter="url(#glow)"/>
+    <!-- Navigation icons -->
+    <circle cx="30" cy="30" r="8" fill="#00FFFF" opacity="0.8"/>
+    <rect x="22" y="55" width="16" height="16" rx="3" fill="#40FF40" opacity="0.7"/>
+    <circle cx="30" cy="90" r="6" fill="#FF40FF" opacity="0.8"/>
+    <rect x="24" y="110" width="12" height="12" rx="2" fill="#00FFFF" opacity="0.6"/>
+    
+    <!-- Activity indicators -->
+    <rect x="45" y="25" width="8" height="3" fill="#40FF40">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="45" y="85" width="6" height="3" fill="#FF40FF">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Right system monitoring -->
+  <g transform="translate(1040, 120)">
+    <rect x="0" y="0" width="140" height="200" rx="12" fill="url(#hologram)" opacity="0.7" filter="url(#glow)"/>
+    
+    <!-- CPU/Memory graphs -->
+    <g transform="translate(20, 30)">
+      <text x="0" y="0" fill="#00FFFF" font-family="monospace" font-size="12" opacity="0.8">CPU</text>
+      <rect x="0" y="10" width="100" height="20" fill="none" stroke="#00FFFF" stroke-width="1"/>
+      <rect x="2" y="12" width="60" height="16" fill="#40FF40" opacity="0.6">
+        <animate attributeName="width" values="60;80;45;70;60" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      
+      <text x="0" y="50" fill="#FF40FF" font-family="monospace" font-size="12" opacity="0.8">MEM</text>
+      <rect x="0" y="60" width="100" height="20" fill="none" stroke="#FF40FF" stroke-width="1"/>
+      <rect x="2" y="62" width="75" height="16" fill="#FF40FF" opacity="0.5">
+        <animate attributeName="width" values="75;85;65;90;75" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      
+      <!-- Real-time data stream -->
+      <text x="0" y="100" fill="#00FFFF" font-family="monospace" font-size="10" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="1s" repeatCount="indefinite"/>
+        RT_SCHED: 1000Hz
+      </text>
+      <text x="0" y="120" fill="#40FF40" font-family="monospace" font-size="10" opacity="0.6">
+        INT_LAT: &lt;1μs
+      </text>
+    </g>
+  </g>
+  
+  <!-- Floating OS logo/branding -->
+  <g transform="translate(600, 100)">
+    <text x="0" y="0" text-anchor="middle" fill="url(#hologram)" font-family="Arial, sans-serif" 
+          font-size="24" font-weight="bold" filter="url(#glow)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite"/>
+      MARTIAN OS
+    </text>
+    <text x="0" y="25" text-anchor="middle" fill="#00FFFF" font-family="monospace" 
+          font-size="12" opacity="0.7">
+      Real-Time • Rust-Powered • Conscious
+    </text>
+  </g>
+  
+  <!-- Data streams connecting panels -->
+  <g opacity="0.4">
+    <path d="M160 300 Q400 250 440 200" stroke="url(#hologram)" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,100;50,50;100,0" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M760 320 Q900 280 1040 250" stroke="url(#hologram)" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" values="100,0;50,50;0,100" dur="4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Atmospheric particles -->
+  <circle cx="200" cy="100" r="2" fill="#FF40FF" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" values="0,0;50,20;0,0" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="80" r="1.5" fill="#00FFFF" opacity="0.7">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-30,15;0,0" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1000" cy="120" r="1" fill="#40FF40" opacity="0.5">
+    <animateTransform attributeName="transform" type="translate" values="0,0;20,-10;0,0" dur="10s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

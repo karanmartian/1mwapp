@@ -15,9 +15,14 @@ import { useEffect, useState } from "react";
 const navigation = [
     { name: "Home", href: "/" },
     { name: "Humanoid Robots", href: "/products" },
-    { name: "AI Consciousness", href: "/artificialintelligence" },
-    { name: "Martian OS", href: "/martianos" },
-    { name: "Robot Spatial Intelligence", href: "/geospatial" },
+    { 
+        name: "Martian OS", 
+        href: "/martianos",
+        submenu: [
+            { name: "AI Consciousness", href: "/artificialintelligence" },
+            { name: "Robot Spatial Intelligence", href: "/geospatial" },
+        ]
+    },
     { name: "Divisions", href: "/brands" },
     { name: "Press", href: "/press" },
 ];

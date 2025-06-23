@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Mars landscape gradient -->
+    <linearGradient id="marsGround" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#CD853F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6347;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Robot body gradient -->
+    <linearGradient id="robotBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E6E6FA;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#B0C4DE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4169E1;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Tech accent gradient -->
+    <linearGradient id="techAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FFFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0080FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4040FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Energy core gradient -->
+    <radialGradient id="energyCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#00FFFF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0080FF;stop-opacity:0.3" />
+    </radialGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Sensor glow -->
+    <filter id="sensorGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Mars landscape background -->
+  <rect width="800" height="400" fill="url(#marsGround)"/>
+  
+  <!-- Mars surface -->
+  <path d="M0 400 Q200 380 400 390 T800 400 L800 600 L0 600 Z" fill="#8B4513"/>
+  
+  <!-- Distant Mars formations -->
+  <ellipse cx="150" cy="350" rx="40" ry="20" fill="#A0522D" opacity="0.6"/>
+  <ellipse cx="650" cy="360" rx="60" ry="25" fill="#CD853F" opacity="0.5"/>
+  
+  <!-- Main humanoid robot -->
+  <g transform="translate(400, 300)">
+    <!-- Robot legs -->
+    <g>
+      <!-- Left leg -->
+      <rect x="-25" y="80" width="15" height="60" rx="7" fill="url(#robotBody)" filter="url(#glow)"/>
+      <circle cx="-17.5" cy="90" r="8" fill="url(#techAccent)" opacity="0.8"/>
+      <circle cx="-17.5" cy="120" r="6" fill="url(#techAccent)" opacity="0.6"/>
+      
+      <!-- Right leg -->
+      <rect x="10" y="80" width="15" height="60" rx="7" fill="url(#robotBody)" filter="url(#glow)"/>
+      <circle cx="17.5" cy="90" r="8" fill="url(#techAccent)" opacity="0.8"/>
+      <circle cx="17.5" cy="120" r="6" fill="url(#techAccent)" opacity="0.6"/>
+      
+      <!-- Feet -->
+      <ellipse cx="-17.5" cy="150" rx="12" ry="8" fill="url(#robotBody)"/>
+      <ellipse cx="17.5" cy="150" rx="12" ry="8" fill="url(#robotBody)"/>
+    </g>
+    
+    <!-- Robot torso -->
+    <rect x="-30" y="0" width="60" height="80" rx="15" fill="url(#robotBody)" filter="url(#glow)"/>
+    
+    <!-- Energy core in chest -->
+    <circle cx="0" cy="40" r="15" fill="url(#energyCore)" filter="url(#sensorGlow)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Chest panel details -->
+    <rect x="-20" y="15" width="40" height="3" fill="url(#techAccent)" opacity="0.7"/>
+    <rect x="-15" y="25" width="30" height="2" fill="url(#techAccent)" opacity="0.5"/>
+    <rect x="-20" y="60" width="40" height="2" fill="url(#techAccent)" opacity="0.6"/>
+    
+    <!-- Robot arms -->
+    <g>
+      <!-- Left arm -->
+      <rect x="-45" y="10" width="12" height="50" rx="6" fill="url(#robotBody)" filter="url(#glow)"/>
+      <circle cx="-39" cy="15" r="6" fill="url(#techAccent)" opacity="0.8"/>
+      <circle cx="-39" cy="35" r="4" fill="url(#techAccent)" opacity="0.6"/>
+      
+      <!-- Right arm -->
+      <rect x="33" y="10" width="12" height="50" rx="6" fill="url(#robotBody)" filter="url(#glow)"/>
+      <circle cx="39" cy="15" r="6" fill="url(#techAccent)" opacity="0.8"/>
+      <circle cx="39" cy="35" r="4" fill="url(#techAccent)" opacity="0.6"/>
+      
+      <!-- Hands/Tools -->
+      <circle cx="-39" cy="65" r="8" fill="url(#robotBody)"/>
+      <rect x="-42" y="68" width="6" height="4" fill="url(#techAccent)" opacity="0.8"/>
+      
+      <!-- Right hand with sensor tool -->
+      <circle cx="39" cy="65" r="8" fill="url(#robotBody)"/>
+      <rect x="36" y="68" width="6" height="4" fill="url(#energyCore)" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="1.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+    
+    <!-- Robot head -->
+    <ellipse cx="0" cy="-20" rx="20" ry="25" fill="url(#robotBody)" filter="url(#glow)"/>
+    
+    <!-- Head sensors and details -->
+    <circle cx="-8" cy="-25" r="4" fill="url(#energyCore)" filter="url(#sensorGlow)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="8" cy="-25" r="4" fill="url(#energyCore)" filter="url(#sensorGlow)">
+      <animate attributeName="opacity" values="1;0.8;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Central processing unit -->
+    <rect x="-6" y="-15" width="12" height="6" rx="3" fill="url(#techAccent)" opacity="0.8"/>
+    <rect x="-4" y="-12" width="8" height="2" fill="url(#energyCore)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.6;0.9" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Head antenna/communication array -->
+    <rect x="-2" y="-45" width="4" height="15" fill="url(#techAccent)" opacity="0.8"/>
+    <circle cx="0" cy="-47" r="3" fill="url(#energyCore)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Side sensors -->
+    <circle cx="-25" cy="-20" r="3" fill="url(#techAccent)" opacity="0.7"/>
+    <circle cx="25" cy="-20" r="3" fill="url(#techAccent)" opacity="0.7"/>
+  </g>
+  
+  <!-- Environmental scanning beams -->
+  <g opacity="0.3">
+    <path d="M360 250 L300 200 L320 180 L380 230 Z" fill="url(#energyCore)">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M440 250 L500 200 L480 180 L420 230 Z" fill="url(#energyCore)">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Data collection points -->
+  <circle cx="200" cy="450" r="3" fill="url(#techAccent)">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="470" r="2" fill="url(#energyCore)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="480" r="2.5" fill="url(#techAccent)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Floating data visualization -->
+  <g transform="translate(550, 150)" opacity="0.7">
+    <rect x="0" y="0" width="80" height="60" rx="8" fill="url(#techAccent)" opacity="0.3"/>
+    <path d="M10 50 L20 30 L30 40 L40 20 L50 35 L60 15 L70 25" 
+          stroke="url(#energyCore)" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,100;50,50;100,0" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <text x="40" y="55" text-anchor="middle" fill="url(#energyCore)" font-family="monospace" font-size="8">
+      SCAN DATA
+    </text>
+  </g>
+  
+  <!-- Atmospheric particles -->
+  <circle cx="150" cy="200" r="1.5" fill="#FF6347" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" values="0,0;30,10;0,0" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="650" cy="180" r="1" fill="#FFD700" opacity="0.7">
+    <animateTransform attributeName="transform" type="translate" values="0,0;-20,15;0,0" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Robot status indicators -->
+  <g transform="translate(50, 50)" opacity="0.8">
+    <rect x="0" y="0" width="120" height="40" rx="8" fill="rgba(0, 0, 0, 0.7)"/>
+    <text x="10" y="15" fill="url(#energyCore)" font-family="monospace" font-size="10">
+      STATUS: ACTIVE
+    </text>
+    <text x="10" y="30" fill="url(#techAccent)" font-family="monospace" font-size="10">
+      MISSION: EXPLORE
+    </text>
+    <circle cx="100" cy="20" r="5" fill="url(#energyCore)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg> 

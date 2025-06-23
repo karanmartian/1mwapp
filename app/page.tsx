@@ -381,7 +381,7 @@ export default function Home() {
                                     <span className="text-4xl">🏁</span>
                                     <div>
                                         <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
-                                            <span className="gradient-text-orange">IDRL</span> - Drone Racing India
+                                            <span className="gradient-text-orange">IDRL</span> - Indian Drone Racing League
                                         </h2>
                                         <p className="text-orange-300 font-medium">Pioneering Autonomous Racing Technology</p>
                                     </div>

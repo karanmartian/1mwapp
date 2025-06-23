@@ -103,7 +103,29 @@ export default function Brands() {
                                 </div>
                                 <div className="flex-shrink-0">
                                     <div className="glass rounded-3xl p-8 text-center max-w-sm">
-                                        <div className="text-8xl mb-6">🚁</div>
+                                        <div className="mb-8 flex justify-center">
+                                            <svg width="100" height="100" viewBox="0 0 100 100" className="text-orange-400">
+                                                {/* Racing drone body */}
+                                                <rect x="35" y="40" width="30" height="20" rx="4" fill="currentColor" />
+                                                
+                                                {/* Propeller arms */}
+                                                <line x1="20" y1="30" x2="80" y2="70" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                                                <line x1="20" y1="70" x2="80" y2="30" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+                                                
+                                                {/* Propellers */}
+                                                <circle cx="20" cy="30" r="8" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.7" />
+                                                <circle cx="80" cy="30" r="8" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.7" />
+                                                <circle cx="20" cy="70" r="8" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.7" />
+                                                <circle cx="80" cy="70" r="8" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.7" />
+                                                
+                                                {/* Center camera/gimbal */}
+                                                <circle cx="50" cy="50" r="6" fill="currentColor" opacity="0.8" />
+                                                
+                                                {/* Racing stripes */}
+                                                <rect x="37" y="42" width="26" height="2" fill="white" opacity="0.6" />
+                                                <rect x="37" y="56" width="26" height="2" fill="white" opacity="0.6" />
+                                            </svg>
+                                        </div>
                                         <h3 className="text-xl font-bold text-white mb-4">Autonomous Racing Technology</h3>
                                         <p className="text-sm text-white/80 mb-6">
                                             Revolutionary AI-powered racing drones with real-time decision making, 

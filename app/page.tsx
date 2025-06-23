@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <>
             {/* Compact Hero Section */}
-            <div className="relative isolate flex items-center justify-center overflow-hidden py-16 sm:py-20">
+            <div className="relative isolate flex items-center justify-center overflow-hidden py-8 sm:py-12">
                 {/* Clean Background */}
                 <div className="absolute inset-0 -z-20">
                     <div className="absolute inset-0 bg-gradient-to-br from-indigo-950 via-purple-900 to-slate-950"></div>
@@ -142,7 +142,7 @@ export default function Home() {
             </div>
 
             {/* Research & Technology Section */}
-            <div className="relative py-16 overflow-hidden">
+            <div className="relative py-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-purple-900/30"></div>
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
                     <div className="mx-auto max-w-3xl text-center mb-12">
@@ -314,7 +314,7 @@ export default function Home() {
             </div>
 
             {/* Research Applications */}
-            <div className="relative py-16 overflow-hidden">
+            <div className="relative py-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-purple-900/30"></div>
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 relative">
                     <div className="mx-auto max-w-3xl text-center mb-12">
@@ -367,7 +367,7 @@ export default function Home() {
             </div>
 
             {/* Research Partnership CTA */}
-            <div className="relative isolate overflow-hidden py-16">
+            <div className="relative isolate overflow-hidden py-8">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-slate-900"></div>
                 <div className="absolute inset-0 grid-bg opacity-20"></div>
                 

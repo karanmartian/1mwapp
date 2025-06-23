@@ -69,9 +69,9 @@ export default function Header() {
                 scrolled 
                     ? 'glass-dark backdrop-blur-xl border-b border-white/10' 
                     : 'backdrop-blur-sm border-b border-transparent'
-            }`} style={{ height: '80px' }}>
+            }`} style={{ height: '64px' }}>
                 <nav
-                    className="flex items-center justify-between p-4 lg:px-8 max-w-7xl mx-auto"
+                    className="flex items-center justify-between px-4 py-3 lg:px-8 max-w-7xl mx-auto"
                     aria-label="Global"
                 >
                     <div className="flex lg:flex-1">

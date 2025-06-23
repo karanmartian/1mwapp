@@ -36,14 +36,14 @@ const spatialFeatures = [
 
 export default function Geospatial() {
     return (
-        <div className="relative min-h-screen pt-[56px] lg:pt-[64px]">
+        <div className="relative min-h-screen">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
             <div className="absolute inset-0 grid-bg opacity-20"></div>
             
-            <div className="relative mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8">
+            <div className="relative mx-auto max-w-7xl px-6 py-6 sm:py-8 lg:px-8">
                 {/* Hero Section */}
-                <div className="relative isolate overflow-hidden glass-card rounded-3xl px-6 py-24 shadow-2xl sm:px-12 lg:px-16 mb-16">
+                <div className="relative isolate overflow-hidden glass-card rounded-3xl px-6 py-12 shadow-2xl sm:px-12 lg:px-16 mb-12">
                     <div className="absolute inset-0 -z-10">
                         <Image
                             src="/assets/img/spatial/spatial-reasoning.jpg"

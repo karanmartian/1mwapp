@@ -39,12 +39,7 @@ export default function Home() {
 
                 <div className="mx-auto max-w-6xl px-6 relative z-10">
                     <div className="mx-auto max-w-4xl text-center">
-                        {/* Status Badge */}
-                        <div className="mb-6 flex justify-center">
-                            <div className="glass-card rounded-full px-4 py-2 text-sm text-amber-300 font-medium border border-amber-400/20">
-                                🔬 Research & Development • Prototype Stage
-                            </div>
-                        </div>
+
 
                         {/* Main Heading */}
                         <h1 className="font-display text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">

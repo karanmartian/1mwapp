@@ -69,7 +69,7 @@ export default function Header() {
                 scrolled 
                     ? 'glass-dark backdrop-blur-xl border-b border-white/10' 
                     : 'backdrop-blur-sm border-b border-transparent'
-            }`}>
+            }`} style={{ height: '80px' }}>
                 <nav
                     className="flex items-center justify-between p-4 lg:px-8 max-w-7xl mx-auto"
                     aria-label="Global"
@@ -167,7 +167,7 @@ export default function Header() {
                             className="lg:hidden fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
                             onClick={() => setMobileMenuOpen(false)}
                         />
-                        <div className="lg:hidden fixed inset-y-0 right-0 z-50 w-full overflow-y-auto glass-dark px-6 py-6 sm:max-w-sm border-l border-white/10">
+                        <div className="lg:hidden fixed inset-y-0 right-0 z-50 w-full overflow-y-auto glass-dark px-6 py-6 sm:max-w-sm border-l border-white/10 transform transition-transform duration-300 ease-in-out">
                             <div className="flex items-center justify-between">
                                 <Link
                                     href="/"

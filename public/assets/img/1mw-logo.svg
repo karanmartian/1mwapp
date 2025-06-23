@@ -47,26 +47,9 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    
-    <!-- Digital pattern -->
-    <pattern id="digitalPattern" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
-      <rect width="16" height="16" fill="none"/>
-      <path d="M4,4 L12,4 M8,4 L8,12 M4,12 L12,12" stroke="url(#techFlow)" stroke-width="0.5" opacity="0.3"/>
-      <circle cx="4" cy="4" r="0.5" fill="url(#techFlow)" opacity="0.4"/>
-      <circle cx="12" cy="12" r="0.5" fill="url(#techFlow)" opacity="0.4"/>
-    </pattern>
   </defs>
   
-  <!-- Deep space background -->
-  <circle cx="60" cy="60" r="58" fill="rgba(10, 10, 30, 0.95)" stroke="url(#spiritualGradient)" stroke-width="1"/>
-  
-  <!-- Subtle digital pattern overlay -->
-  <circle cx="60" cy="60" r="56" fill="url(#digitalPattern)" opacity="0.4"/>
-  
-  <!-- Central energy core -->
-  <circle cx="60" cy="60" r="25" fill="url(#centerGlow)" opacity="0.3"/>
-  
-  <!-- Main Japanese character 八 (hachi) - expanded and stylized -->
+  <!-- Main Japanese character 八 (hachi) with integrated starship -->
   <g transform="translate(60, 60)">
     <!-- Left stroke of 八 -->
     <path d="M-15 -20 L-25 25 L-20 25 L-12 -15 Z" 
@@ -101,51 +84,6 @@
     </circle>
     <circle cx="8" cy="-22" r="1" fill="url(#marsAccent)">
       <animate attributeName="opacity" values="1;0.5;1" dur="1.5s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-  
-  <!-- Spiritual energy particles -->
-  <circle cx="25" cy="30" r="1.5" fill="url(#spiritualGradient)">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="translate" values="0,0;2,1;0,0" dur="5s" repeatCount="indefinite"/>
-  </circle>
-  
-  <circle cx="95" cy="85" r="1" fill="url(#techFlow)">
-    <animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="translate" values="0,0;-1,2;0,0" dur="4s" repeatCount="indefinite"/>
-  </circle>
-  
-  <circle cx="85" cy="25" r="1.2" fill="url(#marsAccent)">
-    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
-    <animateTransform attributeName="transform" type="translate" values="0,0;1,-1;0,0" dur="6s" repeatCount="indefinite"/>
-  </circle>
-  
-  <!-- Flowing energy streams -->
-  <g opacity="0.5">
-    <path d="M15 20 Q30 15 45 25 Q55 35 70 30" stroke="url(#spiritualGradient)" stroke-width="1.5" fill="none">
-      <animate attributeName="stroke-dasharray" values="0,100;50,50;100,0" dur="6s" repeatCount="indefinite"/>
-    </path>
-    <path d="M105 100 Q90 95 75 105 Q65 95 50 100" stroke="url(#techFlow)" stroke-width="1" fill="none">
-      <animate attributeName="stroke-dasharray" values="100,0;50,50;0,100" dur="5s" repeatCount="indefinite"/>
-    </path>
-  </g>
-  
-  <!-- Subtle outer rim -->
-  <circle cx="60" cy="60" r="57" fill="none" stroke="url(#spiritualGradient)" stroke-width="0.5" opacity="0.3"/>
-  
-  <!-- Corner spiritual accents (like traditional Japanese design) -->
-  <g opacity="0.6">
-    <circle cx="20" cy="20" r="2" fill="url(#spiritualGradient)">
-      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="100" cy="20" r="2" fill="url(#techFlow)">
-      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="20" cy="100" r="2" fill="url(#marsAccent)">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="100" cy="100" r="2" fill="url(#spiritualGradient)">
-      <animate attributeName="opacity" values="1;0.3;1" dur="5s" repeatCount="indefinite"/>
     </circle>
   </g>
 </svg> 

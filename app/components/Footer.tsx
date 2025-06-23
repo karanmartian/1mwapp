@@ -210,7 +210,7 @@ export default function Footer() {
                         </div>
                         <div className="mt-4 md:mt-0">
                             <p className="text-xs leading-5 text-white/60">
-                                &copy; 2024 1 Martian Way Industries Pvt. Ltd. All rights reserved.
+                                &copy; {new Date().getFullYear()} 1 Martian Way Industries Pvt. Ltd. All rights reserved.
                             </p>
                         </div>
                     </div>

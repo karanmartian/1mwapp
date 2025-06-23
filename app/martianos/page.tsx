@@ -28,8 +28,8 @@ export default function MartianOS() {
                 <div className="relative isolate overflow-hidden glass-card rounded-3xl px-6 py-12 shadow-2xl sm:px-12 lg:px-16 mb-12">
                     <div className="absolute inset-0 -z-10">
                         <Image
-                            src="/assets/img/martianos-hero.jpg"
-                            alt="Martian OS Architecture"
+                            src="/assets/img/consciousness/neural-consciousness-engine.jpg"
+                            alt="Neural Consciousness Engine - Martian OS"
                             fill
                             className="object-cover opacity-40"
                             priority

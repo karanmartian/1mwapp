@@ -62,8 +62,7 @@ export default function Contact() {
                     </h1>
                     <p className="mt-4 text-lg leading-8 text-white/80">
                         We'd love to hear from you. Our team is ready to assist
-                        with your inquiries about our advanced humanoids, Martian OS and AI. 
-                        solutions.
+                        with your inquiries about our advanced humanoids, Martian OS and AI.
                     </p>
                 </div>
                 <div className="mx-auto mt-12 max-w-2xl bg-slate-900 rounded-2xl shadow-xs ring-1 ring-gray-900/5 p-8">
@@ -79,8 +78,7 @@ export default function Contact() {
                                         Pro Tip:
                                     </span>{" "}
                                     Email is our preferred method of
-                                    communication. Our dedicated team typically
-                                    responds within minutes!
+                                    communication. We hate phone call spams.
                                 </p>
                             </div>
                             <div className="space-y-4">

@@ -7,7 +7,6 @@ import {
     RocketIcon
 } from "@radix-ui/react-icons";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -21,12 +20,13 @@ export default function MartianOS() {
         <div className="relative min-h-screen">
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-            <div className="absolute inset-0 grid-bg opacity-20"></div>
+            {/* <div className="absolute inset-0 grid-bg opacity-20"></div> */}
             
             <div className="relative mx-auto max-w-7xl px-6 py-6 sm:py-8 lg:px-8">
                 {/* Hero Section */}
                 <div className="relative isolate overflow-hidden glass-card rounded-3xl px-6 py-12 shadow-2xl sm:px-12 lg:px-16 mb-12">
-                    <div className="absolute inset-0 -z-10">
+                    {/* Removed background image */}
+                    {/* <div className="absolute inset-0 -z-10">
                         <Image
                             src="/assets/img/consciousness/neural-consciousness-engine.jpg"
                             alt="Neural Consciousness Engine - Martian OS"
@@ -34,7 +34,7 @@ export default function MartianOS() {
                             className="object-cover opacity-40"
                             priority
                         />
-                    </div>
+                    </div> */}
                     <div className="mx-auto max-w-4xl text-center">
                         <h1 className="font-display text-2xl font-bold tracking-tight text-white sm:text-4xl mb-6">
                             <span className="gradient-text-primary">Martian OS</span>

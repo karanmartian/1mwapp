@@ -8,6 +8,7 @@ import {
 } from "@radix-ui/react-icons";
 import type { Metadata } from "next";
 import Link from "next/link";
+import StructuredData from "../components/StructuredData";
 
 export const metadata: Metadata = {
     title: "Martian OS | Advanced Robot Operating System | 1 Martian Way",
@@ -18,6 +19,14 @@ export const metadata: Metadata = {
 export default function MartianOS() {
     return (
         <div className="relative min-h-screen">
+            <StructuredData 
+                type="SoftwareApplication" 
+                data={{
+                    name: "Martian OS",
+                    description: "World's first real-time operating system designed specifically for conscious humanoid robots",
+                    url: "https://1martianway.com/martianos"
+                }}
+            />
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
             {/* <div className="absolute inset-0 grid-bg opacity-20"></div> */}

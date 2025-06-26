@@ -1,21 +1,36 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Press & Media | 1 Martian Way Industries",
+    title: "Press & News | Humanoid Robotics Breakthroughs & AI Consciousness",
     description:
-        "Access our press releases, media resources, and latest news about our innovations in drone technology and artificial intelligence.",
+        "Latest news and press coverage of 1 Martian Way Industries' groundbreaking humanoid robotics research, conscious AI developments, and Martian OS innovations. Media resources and press releases.",
+    keywords: [
+        "humanoid robotics news",
+        "conscious AI press",
+        "robotics breakthrough",
+        "AI consciousness news",
+        "Martian OS news",
+        "robotics press release",
+        "humanoid robot media",
+        "artificial consciousness press",
+        "robotics research news",
+        "sentient robot news"
+    ],
     openGraph: {
-        title: "Press & Media | 1 Martian Way Industries",
+        title: "Press & News | Humanoid Robotics Breakthroughs & AI Consciousness",
         description:
-            "Stay updated with the latest news and developments from 1 Martian Way Industries in drone technology and AI solutions.",
+            "Latest news and breakthroughs in conscious humanoid robotics, AI consciousness research, and Martian OS development.",
         type: "website",
         url: "https://1martianway.com/press",
         siteName: "1 Martian Way Industries",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Press & Media | 1 Martian Way Industries",
+        title: "Press & News | Humanoid Robotics Breakthroughs",
         description:
-            "Stay updated with the latest news and developments from 1 Martian Way Industries in drone technology and AI solutions.",
+            "Latest breakthroughs in conscious humanoid robotics and AI consciousness technology.",
+    },
+    alternates: {
+        canonical: "https://1martianway.com/press",
     },
 };

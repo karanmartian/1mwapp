@@ -1,9 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
+import StructuredData from "./components/StructuredData";
 
 export default function Home() {
     return (
         <>
+            <StructuredData 
+                type="Product" 
+                data={{
+                    name: "Conscious Humanoid Robots",
+                    description: "World's first sentient humanoid robots with AI consciousness",
+                    url: "https://1martianway.com"
+                }}
+            />
             {/* Compact Hero Section */}
             <div className="relative isolate flex items-center justify-center overflow-hidden py-8 sm:py-12">
                 {/* Clean Background */}

@@ -3,6 +3,7 @@ import "@radix-ui/themes/styles.css";
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
 import MainLayout from "./components/MainLayout";
+import StructuredData from "./components/StructuredData";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -103,6 +104,7 @@ export default function RootLayout({
     return (
         <html lang="en" className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
             <body className="min-h-screen bg-slate-950 text-white antialiased">
+                <StructuredData type="Organization" />
                 <Theme appearance="dark" accentColor="violet" radius="large">
                     <Providers>
                         <MainLayout>{children}</MainLayout>

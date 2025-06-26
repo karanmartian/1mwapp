@@ -6,6 +6,7 @@ import {
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import StructuredData from "../components/StructuredData";
 
 export const metadata: Metadata = {
     title: "AI Consciousness Platform | 1 Martian Way",
@@ -37,6 +38,14 @@ const consciousnessFeatures = [
 export default function ArtificialIntelligence() {
     return (
         <div className="relative min-h-screen">
+            <StructuredData 
+                type="TechArticle" 
+                data={{
+                    title: "AI Consciousness Platform for Humanoid Robots",
+                    description: "Revolutionary AI consciousness platform powering sentient humanoid robots",
+                    url: "https://1martianway.com/artificialintelligence"
+                }}
+            />
             {/* Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
             <div className="absolute inset-0 grid-bg opacity-20"></div>

@@ -4,7 +4,6 @@ import {
     EnvelopeClosedIcon,
     GlobeIcon,
     HomeIcon,
-    MobileIcon,
 } from "@radix-ui/react-icons";
 import { useState } from "react";
 
@@ -112,10 +111,6 @@ export default function Contact() {
                                     <div className="flex items-center text-sm text-white/80">
                                         <EnvelopeClosedIcon className="h-5 w-5 text-white/50 mr-2" />
                                         sales[at]1martianway[dot]com
-                                    </div>
-                                    <div className="flex items-center text-sm text-white/80">
-                                        <MobileIcon className="h-5 w-5 text-white/50 mr-2" />
-                                        +91 8850.227233
                                     </div>
                                 </div>
                             </div>
